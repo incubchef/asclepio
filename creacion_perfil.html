@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCLEPIO</title>
+  <link rel="stylesheet" href="src/main.css">
+  <link rel="icon" href="public/esculapio.png" type="image/png"> <!-- Favicon agregado -->
+</head>
+
+<body>
+  <div class="background"></div> <!-- Fondo con la imagen -->
+
+  <div class="container">
+    <!-- Logo agregado encima del modal -->
+    <img src="public/asclepio_logo.png" alt="Logo" class="logo">
+
+    <div class="modal">
+      <h2 id="form-title">Crear Perfil</h2>
+
+      <form id="profile-form">
+        <!-- Campo de número COMB -->
+        <label for="comb-number">Añadir número COMB</label>
+        <input type="text" id="comb-number" required placeholder="Número COMB">
+
+        <!-- Campo de código de verificación -->
+        <label for="verification-code">Añadir código verificación</label>
+        <input type="text" id="verification-code" required placeholder="Código de verificación">
+
+      </form>
+
+      <!-- Botón para iniciar creación del perfil -->
+      <button type="submit" form="profile-form">Iniciar creación perfil</button>
+    </div>
+  </div>
+</body>
+
+</html>
