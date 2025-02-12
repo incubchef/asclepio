@@ -4,18 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASCLEPIO - Dashboard</title>
-  <link rel="stylesheet" href="src/main.css">
-  <link rel="icon" href="public/esculapio.png" type="image/png"> <!-- Favicon agregado -->
+  <title>Dashboard - ASCLEPIO</title>
+  <link rel="stylesheet" href="src/dashboard.css">
+  <script defer src="src/micuenta.js"></script>
 </head>
 
 <body>
-  <div class="background"></div>
 
-  <div class="container">
-    <h2>Bienvenido al Dashboard</h2>
-    <p>Contenido del Dashboard...</p>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+    </div>
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#">INICIO</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">EVALUACIONES</a></li>
+      </ul>
+      <div class="account" id="account">
+        <div class="account-btn" id="account-btn">
+          RS
+        </div>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a href="#">Mi Cuenta</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="content">
+    <!-- Aquí irán los datos del dashboard -->
   </div>
+
 </body>
 
 </html>

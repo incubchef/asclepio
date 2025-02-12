@@ -1,0 +1,120 @@
+/* Reset básico */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #003B64;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  position: relative;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  /* Aumentamos el tamaño del logo */
+}
+
+/* Contenedor del menú y la cuenta */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Espaciado entre el menú y la cuenta */
+}
+
+/* Menú de navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Cuenta */
+.account {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Botón redondo de la cuenta */
+.account-btn {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #003B64;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  border: 2px solid #00CBC1;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #003B64;
+  display: block;
+  padding: 10px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #003B64;
+  color: white;
+}
+
+/* Mostrar el menú cuando está activo */
+.account.active .dropdown-menu {
+  display: block;
+}
+
+/* Contenido principal */
+.main-content {
+  background-color: white;
+  height: calc(100vh - 70px);
+}
