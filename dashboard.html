@@ -11,28 +11,36 @@
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="public/asclepio_logo.png" alt="Asclepio Logo">
-    </div>
-    <div class="nav-container">
-      <ul class="nav-links">
-        <li><a href="#">INICIO</a></li>
-        <li><a href="#">PORTFOLIO</a></li>
-        <li><a href="#">EVALUACIONES</a></li>
-      </ul>
-      <div class="account" id="account">
-        <div class="account-btn" id="account-btn">
-          RS
-        </div>
-        <ul class="dropdown-menu" id="dropdown-menu">
-          <li><a href="#">Mi Cuenta</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
+<nav class="navbar">
+  <div class="logo">
+    <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+  </div>
+
+  <!-- 🔹 Menú Hamburguesa -->
+  <div class="burger-menu" id="burger-menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="#">INICIO</a></li>
+      <li><a href="#">PORTFOLIO</a></li>
+      <li><a href="#">EVALUACIONES</a></li>
+    </ul>
+    <div class="account" id="account">
+      <div class="account-btn" id="account-btn">
+        RS
       </div>
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="#">Mi Cuenta</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Contenido -->
   <div class="content">
@@ -40,5 +48,5 @@
   </div>
 
 </body>
-
+<script src="src/burger.js"></script>
 </html>

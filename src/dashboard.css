@@ -19,7 +19,6 @@ html {
 /* Logo */
 .logo img {
   height: 50px;
-  /* Aumentamos el tamaño del logo */
 }
 
 /* Contenedor del menú y la cuenta */
@@ -27,7 +26,6 @@ html {
   display: flex;
   align-items: center;
   gap: 20px;
-  /* Espaciado entre el menú y la cuenta */
 }
 
 /* Menú de navegación */
@@ -117,4 +115,73 @@ html {
 .main-content {
   background-color: white;
   height: calc(100vh - 70px);
+}
+
+/* 🔹 Menú hamburguesa (se muestra en móviles) */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.burger-menu div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* 🔹 Estilos para móviles */
+@media (max-width: 768px) {
+
+  /* 🔸 Mostrar el menú hamburguesa */
+  .burger-menu {
+    display: flex;
+  }
+
+  /* 🔸 Ocultar el menú principal por defecto */
+  .nav-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #003B64;
+    padding: 10px 0;
+  }
+
+  /* 🔸 Mostrar el menú cuando está activo */
+  .nav-container.active {
+    display: flex;
+  }
+
+  /* 🔸 Asegurar que el menú desplegable aparece en vertical */
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  /* 🔹 Animación del botón hamburguesa al abrir */
+  .burger-menu.active div:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-menu.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active div:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
