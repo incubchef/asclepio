@@ -38,3 +38,6 @@ document.getElementById("register-button").addEventListener("click", function ()
 
 // Activar "Iniciar sesión" por defecto
 switchTab(0);
+
+
+

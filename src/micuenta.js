@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  
   const account = document.getElementById("account");
   const dropdownMenu = document.getElementById("dropdown-menu");
   const logoutLink = dropdownMenu.querySelector("li:last-child a"); // Último enlace (Logout)
@@ -20,3 +21,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "index.html"; // Redirige a index.html
   });
 });
+

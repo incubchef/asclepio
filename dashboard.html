@@ -4,42 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/favicon.png" type="image/png"> <!-- Aquí está el favicon -->
   <title>Dashboard - ASCLEPIO</title>
   <link rel="stylesheet" href="src/dashboard.css">
+  <link rel="stylesheet" href="src/navbar.css">
   <script defer src="src/micuenta.js"></script>
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="logo">
-    <img src="public/asclepio_logo.png" alt="Asclepio Logo">
-  </div>
-
-  <!-- 🔹 Menú Hamburguesa -->
-  <div class="burger-menu" id="burger-menu">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <div class="nav-container">
-    <ul class="nav-links">
-      <li><a href="#">INICIO</a></li>
-      <li><a href="#">PORTFOLIO</a></li>
-      <li><a href="#">EVALUACIONES</a></li>
-    </ul>
-    <div class="account" id="account">
-      <div class="account-btn" id="account-btn">
-        RS
-      </div>
-      <ul class="dropdown-menu" id="dropdown-menu">
-        <li><a href="#">Mi Cuenta</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
+<!-- Cargar el navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="public/asclepio_logo.png" alt="Asclepio Logo">
     </div>
-  </div>
-</nav>
+
+    <!-- 🔹 Menú Hamburguesa -->
+    <div class="burger-menu" id="burger-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#">INICIO</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">EVALUACIONES</a></li>
+      </ul>
+      <div class="account" id="account">
+        <div class="account-btn" id="account-btn">
+          RS
+        </div>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a href="#">Mi Cuenta</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
   <!-- Contenido -->
@@ -49,4 +52,5 @@
 
 </body>
 <script src="src/burger.js"></script>
+
 </html>
