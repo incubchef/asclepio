@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="public/favicon.png" type="image/png"> <!-- Aquí está el favicon -->
+  <link rel="icon" href="public/favicon.png" type="image/png">
   <title>Dashboard - ASCLEPIO</title>
   <link rel="stylesheet" href="src/dashboard.css">
   <link rel="stylesheet" href="src/navbar.css">
@@ -13,13 +13,11 @@
 
 <body>
 
-<!-- Cargar el navbar -->
   <nav class="navbar">
     <div class="logo">
       <img src="public/asclepio_logo.png" alt="Asclepio Logo">
     </div>
 
-    <!-- 🔹 Menú Hamburguesa -->
     <div class="burger-menu" id="burger-menu">
       <div></div>
       <div></div>
@@ -33,9 +31,7 @@
         <li><a href="#">EVALUACIONES</a></li>
       </ul>
       <div class="account" id="account">
-        <div class="account-btn" id="account-btn">
-          RS
-        </div>
+        <div class="account-btn" id="account-btn">RS</div>
         <ul class="dropdown-menu" id="dropdown-menu">
           <li><a href="#">Mi Cuenta</a></li>
           <li><a href="#">Logout</a></li>
@@ -44,13 +40,80 @@
     </div>
   </nav>
 
-
-  <!-- Contenido -->
   <div class="content">
-    <!-- Aquí irán los datos del dashboard -->
+    <div class="left-column">
+      <div class="section-left">
+        <h2>Sección 1</h2>
+        <p>Contenido de la sección 1.</p>
+      </div>
+      <div class="section-left">
+        <h2>Sección 2</h2>
+        <p>Contenido de la sección 2.</p>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="section-horizontal kpis">
+        <div class="kpi">
+          <h3>Total inversiones</h3>
+          <div class="kpi-content">
+            <img src="public/portfolio.png" alt="Icono 2" class="kpi-icon">
+            <p class="kpi-value">4</p>
+          </div>
+        </div>
+<div class="kpi">
+  <h3>Total invertido</h3>
+  <div class="kpi-content">
+    <img src="public/investment.png" alt="Icono 2" class="kpi-icon">
+    <p class="kpi-value">20.000€</p>
+  </div>
+</div>
+<div class="kpi">
+  <h3>Remuneración evaluador</h3>
+  <div class="kpi-content">
+    <img src="public/turnover.png" alt="Icono 2" class="kpi-icon">
+    <p class="kpi-value">1.500€</p>
+  </div>
+</div>
+      </div>
+
+      <div class="section-horizontal news-feed">
+        <h2>Noticias</h2>
+        <div class="news-container">
+          <div class="news-item">
+            <img src="public/34forumhealthcare.jpg" alt="Imagen Noticia 1" class="news-image">
+            <hr>
+            <a href="#" class="news-title">34º Foro de Inversión Healthcare Barcelona</a>
+            <p class="news-text">
+              Innovación y emprendimiento en el sector sanitario con enfoque en biotecnología, dispositivos médicos y
+              salud digital.
+            </p>
+          </div>
+
+          <div class="news-item">
+            <img src="public/noticia2.jpg" alt="Imagen Noticia 2" class="news-image">
+            <hr>
+            <a href="#" class="news-title">Título de la Noticia 2</a>
+            <p class="news-text">
+              Otro breve resumen con información importante sobre la noticia. Solo dos líneas...
+            </p>
+          </div>
+
+          <div class="news-item">
+            <img src="public/noticia1.jpg" alt="Imagen Noticia 3" class="news-image">
+            <hr>
+            <a href="#" class="news-title">Título de la Noticia 3</a>
+            <p class="news-text">
+              Este es un breve resumen de la noticia. Aquí solo se mostrarán dos líneas de texto...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <script src="src/burger.js"></script>
+
 </body>
-<script src="src/burger.js"></script>
 
 </html>
