@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (burgerMenu && navContainer) {
     burgerMenu.addEventListener("click", function () {
+      console.log("Burger clicked!");
       navContainer.classList.toggle("active");
       burgerMenu.classList.toggle("active");
+      console.log(navContainer.classList);  // Verifica las clases de navContainer
     });
   } else {
     console.error("Elementos del menú hamburguesa no encontrados.");
