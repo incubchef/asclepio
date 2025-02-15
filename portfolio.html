@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="public/favicon.png" type="image/png">
+  <title>Dashboard - ASCLEPIO</title>
+  <link rel="stylesheet" href="src/portfolio.css">
+  <link rel="stylesheet" href="src/navbar.css">
+  <script defer src="src/micuenta.js"></script>
+    <script src="src/burger.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <a href="dashboard.html">
+      <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+    </a>
+  </div>
+
+  <div class="burger-menu" id="burger-menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="dashboard.html">INICIO</a></li>
+      <li><a href="noticias.html">NOTICIAS</a></li>
+      <li><a href="portfolio.html"  class="active">PORTFOLIO</a></li>
+      <li><a href="inversiones.html">INVERSIONES</a></li>
+      <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+    </ul>
+    <div class="account" id="account">
+      <div class="account-btn" id="account-btn">RS</div>
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="dashboard-container">
+  <!-- Filtros a la izquierda -->
+<aside class="filters">
+  <h2>Filtros</h2>
+
+  <label for="categoria">Categoría:</label>
+  <select id="categoria">
+    <option value="">Todas</option>
+    <option value="Biotecnología">Biotecnología</option>
+    <option value="Medicina">Medicina</option>
+  </select>
+
+  <label for="subcategoria">Subcategoría:</label>
+  <select id="subcategoria">
+    <option value="">Todas</option>
+    <option value="Oncología">Oncología</option>
+    <option value="Cardiología">Cardiología</option>
+  </select>
+
+  <!-- Estado como botones -->
+  <label>Estado:</label>
+  <div class="estado-filtros">
+    <button class="estado-btn" data-estado="Evaluando">Evaluando</button>
+    <button class="estado-btn" data-estado="Invertida">Invertida</button>
+  </div>
+
+  <!-- Fecha con dos inputs -->
+  <label>Fecha:</label>
+  <div class="fecha-filtros">
+    <input type="date" id="fecha-desde" placeholder="Desde">
+    <input type="date" id="fecha-hasta" placeholder="Hasta">
+  </div>
+</aside>
+
+  <div class="portfolio-container">
+    <section class="project-list">
+      <h2>Portfolio</h2>
+
+      <!-- Tabla de proyectos -->
+      <table class="project-table">
+        <thead>
+          <tr>
+            <th>Compañía</th>
+            <th>Proyecto</th>
+            <th>Categoría</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td onclick="window.location.href='companyInvest1.html';" style="cursor: pointer;"><img src="public/logo_sight.png" alt="Sight Diab" class="project-icon"> <strong>Sight Diab</strong></td>
+            <td>Proyecto visión diabéticos</td>
+            <td>Biotecnología - Oncología</td>
+            <td>10/02/2024</td>
+            <td><span class="estado estado-invertida">Invertida</span></td>
+          </tr>
+          <tr>
+            <td onclick="window.location.href='companyNoInvest.html';" style="cursor: pointer;"><img src="public/logo_globhealth.png" alt="GlobHealth" class="project-icon"> <strong>GlobHealth</strong>
+            </td>
+            <td>Investigación en salud</td>
+            <td>Medicina - General</td>
+            <td>15/03/2024</td>
+            <td><span class="estado estado-invertida">Invertida</span></td>
+          </tr>
+          <tr>
+            <td onclick="window.location.href='companyInvest1.html';" style="cursor: pointer;"><img src="public/logo_onco.png" alt="Onco Solutions" class="project-icon"> <strong>Onco
+                Solutions</strong></td>
+            <td>Desarrollo Biotecnológico</td>
+            <td>Biotecnología - Investigación</td>
+            <td>20/04/2024</td>
+            <td><span class="estado estado-invertida">Invertida</span></td>
+          </tr>
+          <tr>
+            <td onclick="window.location.href='companyB.html';" style="cursor: pointer;"><img src="public/logo_careplus.png" alt="CarePlus Inno" class="project-icon"> <strong>CarePlus
+                Inno</strong></td>
+            <td>Proyecto Salud Digital</td>
+            <td>Medicina - Tecnología</td>
+            <td>05/05/2024</td>
+            <td><span class="estado estado-evaluando">Evaluando</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
+
+</body>
+
+</html>

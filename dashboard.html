@@ -13,99 +13,155 @@
 
 <body>
 
-  <nav class="navbar">
-    <div class="logo">
+<nav class="navbar">
+  <div class="logo">
+    <a href="dashboard.html">
       <img src="public/asclepio_logo.png" alt="Asclepio Logo">
-    </div>
+    </a>
+  </div>
 
-    <div class="burger-menu" id="burger-menu">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+  <div class="burger-menu" id="burger-menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-    <div class="nav-container">
-      <ul class="nav-links">
-        <li><a href="#">INICIO</a></li>
-        <li><a href="#">NOTICIAS</a></li>
-        <li><a href="#">PORTFOLIO</a></li>
-        <li><a href="#">EVALUACIONES</a></li>
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="dashboard.html"  class="active">INICIO</a></li>
+      <li><a href="noticias.html">NOTICIAS</a></li>
+      <li><a href="portfolio.html">PORTFOLIO</a></li>
+      <li><a href="inversiones.html">INVERSIONES</a></li>
+      <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+    </ul>
+    <div class="account" id="account">
+      <div class="account-btn" id="account-btn">RS</div>
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+        <li><a href="index.html">Logout</a></li>
       </ul>
-      <div class="account" id="account">
-        <div class="account-btn" id="account-btn">RS</div>
-        <ul class="dropdown-menu" id="dropdown-menu">
-          <li><a href="#">Mi Cuenta</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <div class="content">
-    <div class="left-column">
-      <div class="section-left">
-        <h2>Mi Portfolio</h2>
-        <p>Contenido de la sección 1.</p>
+<div class="left-column">
+  <div class="section-left">
+    <h2>Mis inversiones</h2>
+    <div class="portfolio-container">
+      <div class="portfolio-item">
+        <img src="public/logo_sight.png" alt="Empresa 1" class="portfolio-icon">
+        <div class="portfolio-content" onclick="window.location.href='companyInvest1.html';" style="cursor: pointer;">
+          <p class="portfolio-company"><strong>Sight Diab</strong></p>
+          <p class="portfolio-title">Proyecto visión diabeticos</p>
+        </div>
+        <button class="investment-btn">10.000€</button>
       </div>
-      <div class="section-left">
-        <h2>Mis evaluaciones</h2>
-        <p>Contenido de la sección 2.</p>
+
+      <div class="portfolio-item">
+        <img src="public/logo_onco.png" alt="Empresa 2" class="portfolio-icon">
+        <div class="portfolio-content" onclick="window.location.href='companyInvest2.html';" style="cursor: pointer;">
+          <p class="portfolio-company"><strong>Onco Solutions</strong></p>
+          <p class="portfolio-title">Desarrollo Biotecnológico</p>
+        </div>
+        <button class="investment-btn">5.000€</button>
       </div>
     </div>
+  </div>
+
+  <div class="section-left">
+    <h2>Mis Evaluaciones</h2>
+    <div class="evaluaciones-container">
+      <div class="evaluacion-item">
+        <img src="public/logo_vita.png" alt="Empresa 3" class="evaluacion-icon">
+        <div class="evaluacion-content" onclick="window.location.href='companyNew.html';" style="cursor: pointer;">
+          <p class="evaluacion-company"><strong>Vita</strong></p>
+          <p class="evaluacion-title">Proyecto para...</p>
+        </div>
+        <button class="evaluacion-btn estado-nuevo">Nuevo</button>
+      </div>
+
+      <div class="evaluacion-item">
+        <img src="public/logo_careplus.png" alt="Empresa 4" class="evaluacion-icon">
+        <div class="evaluacion-content" onclick="window.location.href='companyB.html';" style="cursor: pointer;">
+          <p class="evaluacion-company"><strong>CarePlus Inno</strong></p>
+          <p class="evaluacion-title">Proyecto para...</p>
+        </div>
+        <button class="evaluacion-btn estado-dd">Sci. DD</button>
+      </div>
+
+      <div class="evaluacion-item">
+        <img src="public/logo_globhealth.png" alt="Empresa 5" class="evaluacion-icon">
+        <div class="evaluacion-content" onclick="window.location.href='companyNoInvest.html';" style="cursor: pointer;">
+          <p class="evaluacion-company"><strong>GlobHealth</strong></p>
+          <p class="evaluacion-title">Proyecto para...</p>
+        </div>
+        <button class="evaluacion-btn estado-cerrado">Cerrado</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     <div class="right-column">
       <div class="section-horizontal kpis">
         <div class="kpi">
-          <h3>Total inversiones</h3>
+          <h3>Núm. inversiones</h3>
           <div class="kpi-content">
             <img src="public/portfolio.png" alt="Icono 2" class="kpi-icon">
             <p class="kpi-value">4</p>
           </div>
         </div>
 <div class="kpi">
-  <h3>Total invertido</h3>
+  <h3>Capital invertido</h3>
   <div class="kpi-content">
     <img src="public/investment.png" alt="Icono 2" class="kpi-icon">
-    <p class="kpi-value">20.000€</p>
+    <p class="kpi-value">15.000€</p>
   </div>
 </div>
 <div class="kpi">
   <h3>Remuneración evaluador</h3>
   <div class="kpi-content">
     <img src="public/turnover.png" alt="Icono 2" class="kpi-icon">
-    <p class="kpi-value">1.500€</p>
+    <p class="kpi-value">2.000€</p>
   </div>
 </div>
       </div>
 
       <div class="section-horizontal news-feed">
-        <h2>Noticias</h2>
+        <h2>Últimas noticias</h2>
         <div class="news-container">
           <div class="news-item">
             <img src="public/34forumhealthcare.jpg" alt="Imagen Noticia 1" class="news-image">
             <hr>
-            <a href="#" class="news-title">34º Foro de Inversión Healthcare Barcelona</a>
+            <a href="https://www.comb.cat/es/serveis/emprenedoria/34forum-inversio-healthcare" class="news-title">34º Foro de Inversión Healthcare Barcelona</a>
             <p class="news-text">
-              Innovación y emprendimiento en el sector sanitario con enfoque en biotecnología, dispositivos médicos y
-              salud digital.
+            El Foro de Inversión Healthcare Barcelona es un punto de encuentro entre emprendedores e inversores del sector
+            sanitario. Se pueden presentar empresas con proyectos de Biotecnología, Dispositivos Médicos y Salud Digital en búsqueda
+            de financiación en fase semilla.
             </p>
           </div>
 
           <div class="news-item">
-            <img src="public/noticia2.jpg" alt="Imagen Noticia 2" class="news-image">
+            <img src="public/rafael-simo-premi-diabetis.jpg" alt="Imagen Noticia 2" class="news-image">
             <hr>
-            <a href="#" class="news-title">Título de la Noticia 2</a>
+            <a href="https://www.vallhebron.com/es/actualidad/noticias/la-sociedad-espanola-de-diabetes-premia-la-trayectoria-del-dr-rafael-simo" class="news-title">La Sociedad Española de Diabetes premia la trayectoria del Dr. Rafael Simó</a>
             <p class="news-text">
-              Otro breve resumen con información importante sobre la noticia. Solo dos líneas...
+              El premio Alberto Sols reconoce sus contribuciones en la investigación en diabetes, como la descripción de los
+              mecanismos de neurodegeneración en la retinopatía diabética y nuevas estrategias terapéuticas y vías de neuroprotección
+              precoz.
             </p>
           </div>
 
           <div class="news-item">
-            <img src="public/noticia1.jpg" alt="Imagen Noticia 3" class="news-image">
+            <img src="public/edifici-mediterrania-vhir.jpg" alt="Imagen Noticia 3" class="news-image">
             <hr>
-            <a href="#" class="news-title">Título de la Noticia 3</a>
+            <a href="https://www.expansion.com/catalunya/2022/03/15/622f8d3de5fdeac4648b4662.html" class="news-title">Vall d'Hebron, la gran fábrica de 'start up' médicas</a>
             <p class="news-text">
-              Este es un breve resumen de la noticia. Aquí solo se mostrarán dos líneas de texto...
+              El Hospital de Vall d'Hebron de Barcelona, el de mayor tamaño de Cataluña, ha completado un giro empresarial en los
+              últimos cinco años para...
             </p>
           </div>
         </div>

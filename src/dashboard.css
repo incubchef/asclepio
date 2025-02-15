@@ -139,6 +139,83 @@ hr {
   color: #333;
 }
 
+
+/* Sección Mi Portfolio y Mis Evaluaciones */
+.portfolio-container,
+.evaluaciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.portfolio-item,
+.evaluacion-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-icon,
+.evaluacion-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.portfolio-content,
+.evaluacion-content {
+  flex-grow: 1;
+}
+
+.portfolio-company,
+.evaluacion-company {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.portfolio-title,
+.evaluacion-title {
+  font-size: 14px;
+  color: #555;
+}
+
+.investment-btn,
+.evaluacion-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Botón verde claro para Portfolio */
+.investment-btn {
+  background-color: #A8E6A2;
+  color: #2E7D32;
+}
+
+/* Colores para los estados de Evaluaciones */
+.estado-nuevo {
+  background-color: #008248;
+  color: white;
+}
+
+.estado-dd {
+  background-color: #FFA500;
+  color: white;
+}
+
+.estado-cerrado {
+  background-color: #ec6565;
+  color: white;
+}
+
+
+
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
@@ -153,4 +230,29 @@ hr {
   .news-container {
     grid-template-columns: 1fr;
   }
+}
+
+
+.portfolio-content {
+  cursor: pointer;
+  /* Cambia el cursor a "mano" */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.evaluacion-content {
+    cursor: pointer;
+    /* Cambia el cursor a "mano" */
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+.portfolio-content:hover .portfolio-company strong {
+  text-decoration: underline;
+  /* Subraya el texto al pasar el mouse */
+  color: #00CBC1;
+  /* Cambia el color del texto */
+}
+
+.evaluacion-content:hover .evaluacion-company strong {
+  text-decoration: underline;
+  color: #00CBC1;
 }

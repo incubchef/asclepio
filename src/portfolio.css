@@ -1,0 +1,262 @@
+/* Reset básico */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🔹 Contenedor principal */
+.portfolio-container {
+  padding: 20px;
+}
+
+/* 🔹 Estilo de la tabla */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* 🔹 Estilos del header */
+.project-table thead {
+  background-color: #003B64;
+  color: white;
+}
+
+.project-table th,
+.project-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-table th {
+  font-weight: bold;
+}
+
+/* 🔹 Estilos de las filas */
+.project-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 🔹 Iconos dentro de la tabla */
+.project-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* 🔹 Estados */
+.estado {
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.estado-invertida {
+background-color: #A0A0A0;
+  color: white;
+}
+
+.estado-evaluando {
+  background-color: #FFA500;
+  color: white;
+}
+
+/* 🔹 Responsividad */
+@media (max-width: 768px) {
+  .project-table {
+    font-size: 14px;
+  }
+
+  .project-table th,
+  .project-table td {
+    padding: 8px;
+  }
+
+  .project-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+/* 🔹 Layout principal */
+.dashboard-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 🔹 Filtros en el lado izquierdo */
+.filters {
+  width: 250px;
+  padding: 15px;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+
+.filters h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.filters label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.filters select,
+.filters input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 🔹 Contenedor de la tabla */
+.portfolio-container {
+  flex: 1;
+}
+
+/* 🔹 Tabla */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.project-table thead {
+  background-color: #003B64;
+  color: white;
+}
+
+.project-table th,
+.project-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-table th {
+  font-weight: bold;
+}
+
+/* 🔹 Filas alternadas */
+.project-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 🔹 Iconos de las compañías */
+.project-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* 🔹 Estados */
+.estado {
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.estado-invertida {
+background-color: #A0A0A0;
+  color: white;
+}
+
+.estado-evaluando {
+  background-color: #FFA500;
+  color: white;
+}
+
+/* 🔹 Responsividad */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+  }
+}
+
+
+/* 🔹 Botones de Estado en los filtros */
+.estado-filtros {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.estado-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.estado-btn[data-estado="Evaluando"] {
+  background-color: #FFA500;
+  color: white;
+}
+
+.estado-btn[data-estado="Invertida"] {
+background-color: #A0A0A0;
+  color: white;
+}
+
+/* 🔹 Filtros de fecha */
+.fecha-filtros {
+  display: flex;
+  gap: 10px;
+}
+
+.fecha-filtros input {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 🔹 Centrar y agrandar el título "Portfolio" */
+.titulo-portfolio {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+td[onclick] {
+  cursor: pointer;
+  /* Cambia el cursor a "mano" */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+td[onclick] strong {
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+td[onclick]:hover strong {
+  text-decoration: underline;
+  /* Subraya el texto */
+  color: #00CBC1;
+  /* Cambia el color del texto */
+}

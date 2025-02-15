@@ -3,14 +3,25 @@
   background-color: #003B64;
   display: flex;
   align-items: center;
+  /* Centra todos los elementos verticalmente */
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 10px 30px;
+  /* Reducimos el padding */
+  height: 80px;
+  /* Ajustamos la altura */
   position: relative;
+  overflow: hidden;
+  /* Evita desbordamientos */
 }
 
-/* Logo */
+/* Logo más grande */
 .logo img {
-  height: 70px;
+  height: 60px;
+  /* Aumentamos el tamaño */
+  max-height: 100%;
+  /* Evita que se salga del navbar */
+  width: auto;
+  /* Mantiene la proporción */
 }
 
 /* Contenedor del menú y la cuenta */
@@ -39,6 +50,10 @@
   font-size: 16px;
   padding: 10px 15px;
   transition: background 0.3s;
+}
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
 }
 
 .nav-links a:hover {
