@@ -256,3 +256,16 @@ hr {
   text-decoration: underline;
   color: #00CBC1;
 }
+
+.kpi-value:hover {
+  text-decoration: underline;
+  color: #00CBC1;
+      cursor: pointer;
+        /* Cambia el cursor a "mano" */
+        transition: background-color 0.3s, transform 0.2s;
+}
+
+    /* Quitar subrayado del enlace */
+    .kpi-link {
+      text-decoration: none;
+    }
