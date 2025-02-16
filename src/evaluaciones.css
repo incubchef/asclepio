@@ -63,16 +63,6 @@ html {
   display: inline-block;
 }
 
-.estado-invertida {
-    background-color: #A8E6A2;
-      color: #2E7D32;
-}
-
-.estado-evaluando {
-  background-color: #FFA500;
-  color: white;
-}
-
 /* 🔹 Responsividad */
 @media (max-width: 768px) {
   .project-table {
@@ -177,12 +167,12 @@ html {
 }
 
 .estado-invertida {
-    background-color: #A8E6A2;
-      color: #2E7D32;
+background-color: #64045c;
+  color: white;
 }
 
 .estado-evaluando {
-  background-color: #FFA500;
+  background-color: #00d1a0a9;
   color: white;
 }
 
@@ -203,6 +193,7 @@ html {
   display: flex;
   gap: 10px;
   margin-top: 5px;
+  flex-wrap: wrap;
 }
 
 .estado-btn {
@@ -214,13 +205,13 @@ html {
 }
 
 .estado-btn[data-estado="Evaluando"] {
-  background-color: #FFA500;
+  background-color: #64045c;
   color: white;
 }
 
 .estado-btn[data-estado="Invertida"] {
-    background-color: #A8E6A2;
-      color: #2E7D32;
+background-color: #00d1a0a9;
+  color: white;
 }
 
 /* 🔹 Filtros de fecha */
@@ -260,3 +251,40 @@ td[onclick]:hover strong {
   color: #00CBC1;
   /* Cambia el color del texto */
 }
+
+
+
+/* Colores para los estados de Evaluaciones */
+.estado-btn[data-estado="Desestimado"] {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.estado-btn[data-estado="Undereval"] {
+  background-color: #FFA500;
+  color: white;
+}
+
+.estado-btn[data-estado="Cerrada"] {
+  background-color: #770303;
+  color: white;
+}
+
+
+
+.estado-eval {
+  background-color: #FFA500;
+    color: white;
+}
+
+.estado-cerrado {
+  background-color: #770303;
+    color: white;
+}
+
+.estado-desestimado {
+  background-color: #2b2b2b;
+    color: white;
+}
+
+

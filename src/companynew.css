@@ -1,0 +1,538 @@
+/* Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.company-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo de la compañía */
+.company-logo img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+/* Información de la compañía */
+.company-info {
+  flex: 1;
+}
+
+h2 {
+  color: #0056b3;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+
+
+.document-list {
+  display: flex;
+  gap: 20px;
+}
+
+.document-list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.document-list img {
+  width: 50px;
+  height: 50px;
+}
+
+.document-list p {
+  margin-top: 5px;
+}
+
+/* Sección Evaluación */
+.evaluation-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.evaluation-section button {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.evaluation-section button:hover {
+  background-color: #218838;
+}
+
+/* Evaluación */
+.evaluation-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.evaluation-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.evaluation-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.evaluation-buttons button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.evaluation-buttons button:nth-child(2) {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.evaluation-buttons button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* 🔹 Estilos de pestañas */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.tab-button:hover {
+  background: #0056b3;
+}
+
+.tab-button.active {
+  background: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* 🔹 Ocultar secciones no activas */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* 🔹 Diseño mejorado de botones */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* 🔹 Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-accept {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-accept:hover {
+  background-color: #218838;
+}
+
+.btn-deny {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-deny:hover {
+  background-color: #c82333;
+}
+
+/* 🔹 Icono del candado */
+#candado {
+  margin-left: 5px;
+}
+
+/* 🔹 Mostrar sección activa */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+/* 🔹 Botón Estado */
+.estado-dd {
+  background-color: #FFA500;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+
+.document-list {
+  display: flex;
+  gap: 20px;
+}
+
+.document-list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.document-list img {
+  width: 50px;
+  height: 50px;
+}
+
+.document-list p {
+  margin-top: 5px;
+}
+
+/* 🔹 Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Aplicar la misma estética de company-container a otras secciones */
+.company-description,
+.documents-section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Diseño del formulario de Evaluación */
+.evaluation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.evaluation-form label {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.evaluation-form input,
+.evaluation-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.evaluation-form textarea {
+  resize: vertical;
+}
+
+.evaluation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+
+/* Aplicar la misma estética de company-container a otras secciones */
+.company-description,
+.documents-section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Diseño del formulario de Evaluación */
+.evaluation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.evaluation-form label {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.evaluation-form input,
+.evaluation-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.evaluation-form textarea {
+  resize: vertical;
+}
+
+/* 🔹 Botones: Guardar Borrador | Enviar | Cancelar */
+.evaluation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Aplicar la misma estética de company-container a otras secciones */
+.company-description,
+.documents-section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* 🔹 Sección Documentos Adjuntos en Evaluación */
+.documents-section {
+  display: block !important;;
+  /* Asegurarse de que los documentos se sigan mostrando */
+}
+
+.evaluation-section {
+  display: none;
+  /* Para que no aparezca la sección completa de evaluación */
+}
+
+/* 🔹 Diseño del formulario de Evaluación */
+.evaluation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.evaluation-form label {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.evaluation-form input,
+.evaluation-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.evaluation-form textarea {
+  resize: vertical;
+}
+
+/* 🔹 Botones: Guardar Borrador | Enviar | Cancelar */
+.evaluation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-draft {
+  background-color: #f0ad4e;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-submit {
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-draft:hover {
+  background-color: #ec971f;
+}
+
+.btn-submit:hover {
+  background-color: green;
+}
+
+.btn-cancel:hover {
+  background-color: #c82333;
+}
+
+/* 🔹 Cambiar el candado a un check verde cuando se acepta */
+#candado-eval {
+  display: inline-block;
+}
+
+.evaluador-aceptado #candado-eval {
+  display: none;
+}
+
+.evaluador-aceptado::after {
+  content: " ✅";
+  color: green;
+  font-weight: bold;
+}
+
+/* 🔹 Estilos de pestañas actualizados */
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background: #4f95e0; /* Gris claro para las pestañas inactivas */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.tab-button.active {
+  background: #004085; /* Azul más oscuro para la pestaña activa */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button:hover {
+  background: #0056b3; /* Azul intermedio cuando se pasa el mouse */
+}
+
+.tab-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* 🔹 Botón Enviar (Submit) en verde */
+.btn-submit {
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}

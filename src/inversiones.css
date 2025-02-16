@@ -64,13 +64,14 @@ html {
 }
 
 .estado-invertida {
+
     background-color: #A8E6A2;
       color: #2E7D32;
 }
 
 .estado-evaluando {
-  background-color: #FFA500;
-  color: white;
+  background-color: #e6002e;
+    color: white;
 }
 
 /* 🔹 Responsividad */
@@ -182,8 +183,8 @@ html {
 }
 
 .estado-evaluando {
-  background-color: #FFA500;
-  color: white;
+  background-color: #f9476b;
+    color: white;
 }
 
 /* 🔹 Responsividad */
@@ -214,8 +215,8 @@ html {
 }
 
 .estado-btn[data-estado="Evaluando"] {
-  background-color: #FFA500;
-  color: white;
+  background-color: #f9476b;
+    color: white;
 }
 
 .estado-btn[data-estado="Invertida"] {

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación - ASCLEPIO</title>
+  <link rel="stylesheet" href="src/companynew.css">
+  <link rel="stylesheet" href="src/navbar.css">
+</head>
+
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="dashboard.html">
+        <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+      </a>
+    </div>
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="dashboard.html">INICIO</a></li>
+        <li><a href="noticias.html">NOTICIAS</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="inversiones.html">INVERSIONES</a></li>
+        <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 🔹 Pestañas -->
+  <div class="tabs-container">
+    <button class="tab-button" onclick="window.location.href='CompanyNew.html'">Compañía</button>
+    <button class="tab-button active">Evaluación</button>
+    <button class="tab-button" id="reviewTab" disabled>Review <span id="candado-review">🔒</span></button>
+  </div>
+
+  <!-- 🔹 Documentos Adjuntos en Evaluación -->
+  <div class="documents-section">
+    <h3>Documentos Adjuntos</h3>
+    <div class="document-list">
+      <a href="docs/requisitos_tecnicos.pdf" download>
+        <img src="public/pdf.png" alt="PDF">
+        <p>Business Report</p>
+      </a>
+      <a href="docs/guia_evaluacion.pdf" download>
+        <img src="public/pdf.png" alt="PDF">
+        <p>Especificaciones Técnicas</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- 🔹 Formulario de Evaluación -->
+  <div class="evaluation-container">
+    <h2>Formulario de Evaluación</h2>
+    <form class="evaluation-form">
+      <label for="criterio1">Criterio 1:</label>
+      <input type="text" id="criterio1" name="criterio1" placeholder="Ingrese su evaluación">
+
+      <label for="criterio2">Criterio 2:</label>
+      <input type="text" id="criterio2" name="criterio2" placeholder="Ingrese su evaluación">
+
+      <label for="comentarios">Comentarios:</label>
+      <textarea id="comentarios" name="comentarios" rows="4" placeholder="Ingrese sus comentarios"></textarea>
+
+      <!-- 🔹 Botones: Guardar Borrador | Enviar | Cancelar -->
+      <div class="evaluation-buttons">
+        <button type="button" class="btn-draft">Guardar Borrador</button>
+        <button type="submit" class="btn-submit">Enviar</button>
+        <button type="button" class="btn-cancel">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="src/burger.js"></script>
+</body>
+
+</html>

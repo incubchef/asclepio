@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company - ASCLEPIO</title>
+  <link rel="stylesheet" href="src/companynew.css">
+  <link rel="stylesheet" href="src/navbar.css">
+  <script defer src="src/evaluador.js"></script>
+</head>
+
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="dashboard.html">
+        <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+      </a>
+    </div>
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="dashboard.html">INICIO</a></li>
+        <li><a href="noticias.html">NOTICIAS</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="inversiones.html">INVERSIONES</a></li>
+        <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 🔹 Pestañas -->
+  <div class="tabs-container">
+    <button class="tab-button active" >Compañía</button>
+    <button class="tab-button" id="evalTab" disabled onclick="window.location.href='CompanyNew_eval.html'">Evaluación <span id="candado-eval">🔒</span></button>
+    <button class="tab-button" id="reviewTab" disabled>Review <span id="candado-review">🔒</span></button>
+  </div>
+
+  <!-- 🔹 Sección Compañía -->
+  <div class="company-container">
+    <div class="company-logo">
+      <img src="public/logo_vita.png" alt="Logo Empresa">
+    </div>
+    <div class="company-info">
+      <h2>VITA</h2>
+      <p><strong>Proyecto:</strong>MindHorizon</p>
+      <p><strong>Dirección:</strong> 40956 California Oaks Road, Temecula, CA</p>
+      <p><strong>Especialidad:</strong> Mental health</p>
+      <p><strong>Estado Análisis:</strong> <span class="estado-dd">Science DD</span></p>
+    </div>
+  </div>
+
+  <!-- 🔹 Descripción del Proyecto -->
+  <div class="company-description">
+    <h3>Descripción del Proyecto</h3>
+    <p>
+MindHorizon es una plataforma de bienestar mental basada en inteligencia artificial que ofrece terapia digital
+personalizada. Utiliza modelos de IA para analizar patrones emocionales y recomendar ejercicios de mindfulness, sesiones
+de terapia guiadas por chatbots especializados y contenido adaptado a las necesidades de cada usuario.
+
+A través de un enfoque híbrido, combina terapia tradicional con algoritmos que detectan cambios en el estado de ánimo y
+sugieren intervenciones en tiempo real. Además, MindHorizon integra realidad virtual para ayudar a los usuarios a
+enfrentar fobias, reducir el estrés y mejorar la regulación emocional en entornos inmersivos.
+
+Su misión es democratizar el acceso a la salud mental, ofreciendo apoyo accesible y personalizado 24/7 para mejorar la
+calidad de vida de las personas.
+    </p>
+  </div>
+
+  <!-- 🔹 Documentos Adjuntos -->
+  <div class="documents-section">
+    <h3>Documentos Adjuntos</h3>
+    <div class="document-list">
+      <a href="docs/business_report.pdf" download>
+        <img src="public/pdf.png" alt="PDF">
+        <p>Pitch Deck</p>
+      </a>
+      <a href="docs/tech_specs.pdf" download>
+        <img src="public/pdf.png" alt="PDF">
+        <p>Deep DD</p>
+      </a>
+      <a href="docs/patents.pdf" download>
+        <img src="public/pdf.png" alt="PDF">
+        <p>Patentes</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- 🔹 Modal de Evaluador -->
+  <div id="evaluadorModal" class="modal">
+    <div class="modal-content">
+      <h2>¿Quieres ser Evaluador del Proyecto?</h2>
+      <button class="btn-accept" onclick="aceptarEvaluador()">Confirmar</button>
+      <button class="btn-deny" onclick="denegarEvaluador()">Rechazar</button>
+    </div>
+  </div>
+
+  <script src="src/burger.js"></script>
+</body>
+
+</html>

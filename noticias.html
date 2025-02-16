@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="public/favicon.png" type="image/png">
+  <title>Dashboard - ASCLEPIO</title>
+  <link rel="stylesheet" href="src/portfolio.css">
+    <link rel="stylesheet" href="src/noticias.css">
+  <link rel="stylesheet" href="src/navbar.css">
+  <link rel="stylesheet" href="src/news.css"> <!-- Nuevo CSS para noticias -->
+  <script defer src="src/micuenta.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="dashboard.html">
+        <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+      </a>
+    </div>
+
+    <div class="burger-menu" id="burger-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="dashboard.html">INICIO</a></li>
+        <li><a href="noticias.html" class="active">NOTICIAS</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="inversiones.html">INVERSIONES</a></li>
+        <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+      </ul>
+      <div class="account" id="account">
+        <div class="account-btn" id="account-btn">RS</div>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-container">
+    <aside class="filters">
+      <h2>Filtros</h2>
+      <label for="categoria">Categoría:</label>
+      <select id="categoria">
+        <option value="">Todas</option>
+        <option value="Biotecnología">Biotecnología</option>
+        <option value="Medicina">Medicina</option>
+      </select>
+      <label for="subcategoria">Subcategoría:</label>
+      <select id="subcategoria">
+        <option value="">Todas</option>
+        <option value="Oncología">Oncología</option>
+        <option value="Cardiología">Cardiología</option>
+      </select>
+      <label>Etiquetas:</label>
+      <div class="estado-filtros">
+    <button class="estado-btn">Inversión</button>
+    <button class="estado-btn">Oncología</button>
+    <button class="estado-btn">Cardiología</button>
+    <button class="estado-btn">Neurología</button>
+    <button class="estado-btn">Pediatría</button>
+    <button class="estado-btn">Traumatología</button>
+    <button class="estado-btn">Salud Digital</button>
+    <button class="estado-btn">Telemedicina</button>
+    <button class="estado-btn">Biotecnología</button>
+    <button class="estado-btn">Farmacéutica</button>
+      </div>
+      <label>Fecha:</label>
+      <div class="fecha-filtros">
+        <input type="date" id="fecha-desde" placeholder="Desde">
+        <input type="date" id="fecha-hasta" placeholder="Hasta">
+      </div>
+    </aside>
+
+    <div class="portfolio-container">
+      <section class="project-list">
+        <h2>Noticias</h2>
+        <div class="news-feed">
+          <div class="news-container">
+            <div class="news-item">
+              <img src="public/34forumhealthcare.jpg" alt="Imagen Noticia 1" class="news-image">
+              <hr>
+              <a href="https://www.comb.cat/es/serveis/emprenedoria/34forum-inversio-healthcare" class="news-title">34º
+                Foro de Inversión Healthcare Barcelona</a>
+              <p class="news-text">
+                El Foro de Inversión Healthcare Barcelona es un punto de encuentro entre emprendedores e inversores del
+                sector
+                sanitario. Se pueden presentar empresas con proyectos de Biotecnología, Dispositivos Médicos y Salud
+                Digital en búsqueda
+                de financiación en fase semilla.
+              </p>
+            </div>
+
+            <div class="news-item">
+              <img src="public/rafael-simo-premi-diabetis.jpg" alt="Imagen Noticia 2" class="news-image">
+              <hr>
+              <a href="https://www.vallhebron.com/es/actualidad/noticias/la-sociedad-espanola-de-diabetes-premia-la-trayectoria-del-dr-rafael-simo"
+                class="news-title">La Sociedad Española de Diabetes premia la trayectoria del Dr. Rafael Simó</a>
+              <p class="news-text">
+                El premio Alberto Sols reconoce sus contribuciones en la investigación en diabetes, como la descripción
+                de los
+                mecanismos de neurodegeneración en la retinopatía diabética y nuevas estrategias terapéuticas y vías de
+                neuroprotección
+                precoz.
+              </p>
+            </div>
+
+            <div class="news-item">
+              <img src="public/edifici-mediterrania-vhir.jpg" alt="Imagen Noticia 3" class="news-image">
+              <hr>
+              <a href="https://www.expansion.com/catalunya/2022/03/15/622f8d3de5fdeac4648b4662.html"
+                class="news-title">Vall d'Hebron, la gran fábrica de 'start up' médicas</a>
+              <p class="news-text">
+                El Hospital de Vall d'Hebron de Barcelona, el de mayor tamaño de Cataluña, ha completado un giro
+                empresarial en los
+                últimos cinco años para...
+              </p>
+            </div>
+<div class="news-item">
+  <img src="public/votum_world.jpg" alt="Imagen Noticia 1" class="news-image">
+  <hr>
+  <a href="https://cincodias.elpais.com/companias/2025-02-12/la-biotecnologica-de-productos-con-cannabis-votum-world-abre-una-ronda-de-financiacion-en-startupxplore.html"
+    class="news-title">La biotecnológica Votum World abre ronda de financiación en Startupxplore</a>
+  <p class="news-text">
+    La startup española Votum World, especializada en productos de salud y deporte con cannabinoides, ha lanzado una
+    ronda de inversión para recaudar 300.000 euros destinados a investigación y desarrollo, ampliación de equipo y
+    expansión comercial.
+  </p>
+</div>
+
+<div class="news-item">
+  <img src="public/hospital_miguel_servet.jpg" alt="Imagen Noticia 2" class="news-image">
+  <hr>
+  <a href="https://cadenaser.com/aragon/2025/02/10/mas-opciones-para-los-enfermos-de-cancer-que-no-responden-al-tratamiento-radio-zaragoza/"
+    class="news-title">Nueva unidad en el Hospital Miguel Servet para pacientes oncológicos</a>
+  <p class="news-text">
+    El Hospital Miguel Servet ha anunciado la creación de una unidad dedicada a ensayos clínicos con medicamentos
+    experimentales para pacientes oncológicos que no responden a tratamientos actuales, ofreciendo nuevas opciones
+    terapéuticas.
+  </p>
+</div>
+
+<div class="news-item">
+  <img src="public/banco_sabadell.jpg" alt="Imagen Noticia 3" class="news-image">
+  <hr>
+  <a href="https://cincodias.elpais.com/companias/2025-02-13/sabadell-acelera-en-el-negocio-inversor-en-capital-riesgo-y-startups-en-plena-opa-de-bbva.html"
+    class="news-title">Banco Sabadell impulsa inversiones en capital riesgo y startups</a>
+  <p class="news-text">
+    En medio de la oferta pública de adquisición por parte de BBVA, Banco Sabadell ha intensificado su actividad en
+    inversiones en startups y capital riesgo, destacando la creación del fondo Necta Ventures con un valor de 100
+    millones de euros.
+  </p>
+</div>
+
+<div class="news-item">
+  <img src="public/novartis.jpg" alt="Imagen Noticia 4" class="news-image">
+  <hr>
+  <a href="https://www.eleconomista.es/salud/noticias/12358634/07/23/novartis-centrara-su-nueva-estrategia-en-oncologia-y-cardiologia.html"
+    class="news-title">Novartis enfocará su estrategia en oncología y cardiología</a>
+  <p class="news-text">
+    Novartis está reestructurando su estrategia para centrarse principalmente en oncología y enfermedades
+    cardiovasculares, las dos principales causas de muerte a nivel mundial.
+  </p>
+</div>
+
+<div class="news-item">
+  <img src="public/pharmamar.jpg" alt="Imagen Noticia 5" class="news-image">
+  <hr>
+  <a href="https://www.larazon.es/salud/pharmamar-encabeza-investigacion-oncologica-espana_20250204679bb3350b2ad20001aeccc4.html"
+    class="news-title">PharmaMar lidera la investigación oncológica en España</a>
+  <p class="news-text">
+    PharmaMar se posiciona como la segunda empresa en España en inversión en I+D por empleado y lidera la investigación
+    oncológica en el país, con una inversión de 97 millones de euros en este ámbito.
+  </p>
+</div>
+
+<div class="news-item">
+  <img src="public/fondo_otan.jpg" alt="Imagen Noticia 6" class="news-image">
+  <hr>
+  <a href="https://cincodias.elpais.com/companias/2025-02-04/el-fondo-de-inversion-de-la-otan-busca-startups-disruptivas-en-espana.html"
+    class="news-title">El fondo de inversión de la OTAN busca startups disruptivas en España</a>
+  <p class="news-text">
+    El fondo de inversión de la OTAN ha mostrado interés en startups disruptivas en España, participando en la III
+    Edición de Science for Industry 2025, evento organizado por la Universidad Autónoma de Madrid y el fondo BeAble
+    Capital.
+  </p>
+</div>
+
+
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="src/burger.js"></script>
+</body>
+
+</html>
