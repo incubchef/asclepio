@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ASCLEPIO - Verificación de Perfil</title>
-  <link rel="stylesheet" href="src/perfil.css">
+
     <link rel="stylesheet" href="src/verificacion_perfil.css">
 </head>
 
@@ -18,24 +18,33 @@
       </div>
       <!-- Lado derecho con formulario y progreso -->
       <div class="modal-right">
+
         <!-- Barra de progreso -->
         <div class="progress-container">
+        <!-- Barra de progreso -->
+        <!-- Contenedor de la barra de progreso -->
+        <div class="progress-container">
+          <!-- Línea de progreso de fondo -->
+          <div class="progress-line"></div>
+        
+          <!-- Pasos -->
           <div class="progress-bar">
-            <div class="step">
+            <div class="step ">
               <span class="icon">🔒</span>
               <p>Datos login</p>
             </div>
-            <div class="progress-line active"></div>
+        
             <div class="step">
               <span class="icon user-icon">👤</span>
               <p>Búsqueda perfil</p>
             </div>
-            <div class="progress-line"></div>
+        
             <div class="step completed">
               <span class="icon">🏁</span>
               <p>Validación perfil</p>
             </div>
           </div>
+        </div>
 
         <h2>Confirma tu Información</h2>
 
@@ -61,12 +70,19 @@
           <label for="links">Links de Interés</label>
           <input type="url" id="links" value="https://example.com/publicacion1" required>
           <input type="url" id="links2" value="https://example.com/publicacion2" required>
-
-          <button type="submit">Validar</button>
+          <button type="submit" id="submit-button">Validar</button>
         </form>
       </div>
     </div>
   </div>
 </body>
+
+  <script>
+    document.getElementById("submit-button").addEventListener("click", function () {
+      this.disabled = true;
+      this.textContent = "Cargando...";
+      setTimeout(() => { window.location.href = "dashboard.html"; }, 3000);
+    });
+  </script>
 
 </html>

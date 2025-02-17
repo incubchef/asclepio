@@ -1,4 +1,7 @@
-/* Fondo igual al login */
+/* ============================= */
+/* ======== ESTILOS BASE ======== */
+/* ============================= */
+
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(to right, #fff, #00CBC1, #006AB4);
@@ -9,7 +12,10 @@ body {
   margin: 0;
 }
 
-/* Contenedor modal */
+/* ============================= */
+/* ========= MODAL ============= */
+/* ============================= */
+
 .modal {
   display: flex;
   width: 750px;
@@ -39,55 +45,10 @@ body {
   text-align: center;
 }
 
-/* Barra de progreso */
-.progress-bar {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding: 10px 0;
-}
+/* ============================= */
+/* ======== FORMULARIO ========= */
+/* ============================= */
 
-.step {
-  width: 30%;
-  text-align: center;
-  position: relative;
-  color: #ccc;
-  font-weight: bold;
-}
-
-.step .icon {
-  display: block;
-  font-size: 20px;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto 5px;
-  background: #e0e0e0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.step.completed .icon {
-  background: #00CBC1;
-  color: white;
-}
-
-.step.active {
-  color: #003B64;
-}
-
-.step.active .icon {
-  background: #003B64;
-  color: white;
-}
-
-/* ICONO DE USER PROFILE EN BLANCO */
-.user-icon {
-  color: white !important;
-}
-
-/* Formulario */
 .modal-content {
   text-align: left;
 }
@@ -97,6 +58,7 @@ body {
   color: #003B64;
 }
 
+/* Campos de entrada */
 input {
   width: 100%;
   padding: 12px;
@@ -106,6 +68,7 @@ input {
   font-size: 14px;
 }
 
+/* Botón de formulario */
 button {
   width: 100%;
   background-color: #00CBC1;
@@ -122,8 +85,15 @@ button:hover {
   background-color: #009B94;
 }
 
-/* Contenedor de la barra de progreso */
+/* ============================= */
+/* ==== BARRA DE PROGRESO ====== */
+/* ============================= */
+
 .progress-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -131,38 +101,63 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 80%;
   position: relative;
 }
 
-/* Pasos de la barra de progreso */
+/* Línea de progreso */
+.progress-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+
+/* Línea activa */
+.progress-bar .completed~.progress-line {
+  background: #00CBC1;
+  transition: 0.3s ease-in-out;
+}
+
+/* Pasos */
 .step {
-  width: 30%;
+  width: 33%;
   text-align: center;
-  position: relative;
   color: #ccc;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Íconos de cada paso */
 .step .icon {
-  display: block;
   font-size: 20px;
   width: 40px;
   height: 40px;
-  margin: 0 auto 5px;
   background: #e0e0e0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5px;
 }
 
-/* Estilos para pasos completados */
+/* Paso completado */
+.step.completed {
+  color: #00CBC1;
+}
+
 .step.completed .icon {
   background: #00CBC1;
   color: white;
 }
 
-/* Estilos para el paso activo */
+/* Paso activo */
 .step.active {
   color: #003B64;
 }
@@ -172,24 +167,10 @@ button:hover {
   color: white;
 }
 
-/* Línea de conexión entre pasos */
-.progress-line {
-  flex-grow: 1;
-  height: 4px;
-  background: #ccc;
-  margin: 0 5px;
-}
+/* ============================= */
+/* ======== BOTONES ============ */
+/* ============================= */
 
-.progress-line.active {
-  background: #00CBC1;
-}
-
-/* ICONO USER PROFILE BLANCO */
-.user-icon {
-  color: white !important;
-}
-
-/* Grupo de botones */
 .button-group {
   display: flex;
   justify-content: space-between;
@@ -197,7 +178,7 @@ button:hover {
   margin-top: 15px;
 }
 
-/* Estilo para la flecha de regreso */
+/* Flecha de regreso */
 .back-arrow {
   text-decoration: none;
   color: #003B64;
@@ -209,4 +190,90 @@ button:hover {
 
 .back-arrow:hover {
   color: #009B94;
+}
+
+/* ============================= */
+/* ===== BARRA DE PROGRESO ===== */
+/* ============================= */
+
+.progress-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Línea de progreso de fondo */
+.progress-line {
+  position: absolute;
+  top: 22px;
+  /* Ajusta según el tamaño de los iconos */
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background: #ccc;
+  z-index: 0;
+}
+
+/* Pasos */
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
+}
+
+/* Estilo de cada paso */
+.step {
+  position: relative;
+  text-align: center;
+  color: #ccc;
+  font-weight: bold;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  /* Para que esté sobre la línea */
+}
+
+/* Íconos de cada paso */
+.step .icon {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+/* Paso completado */
+.step.completed {
+  color: #00CBC1;
+}
+
+.step.completed .icon {
+  background: #00CBC1;
+  color: white;
+}
+
+/* Paso activo */
+.step.active {
+  color: #003B64;
+}
+
+.step.active .icon {
+  background: #003B64;
+  color: white;
+}
+
+/* Línea activa de progreso (se pinta hasta el paso activo) */
+.step.completed~.progress-line {
+  background: #00CBC1;
+  transition: 0.3s ease-in-out;
 }

@@ -274,10 +274,100 @@ button:hover {
   align-items: center;
   color: white;
   font-size: 20px;
+  z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
 }
 
 .loading-content {
   background: #222;
   padding: 20px;
   border-radius: 10px;
+  z-index: 1001;
+
+}
+
+/* ============================= */
+/* ===== BARRA DE PROGRESO ===== */
+/* ============================= */
+
+.progress-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Línea de progreso de fondo */
+.progress-line {
+  position: absolute;
+  top: 22px;
+  /* Ajusta según el tamaño de los iconos */
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background: #ccc;
+  z-index: 0;
+}
+
+/* Pasos */
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
+}
+
+/* Estilo de cada paso */
+.step {
+  position: relative;
+  text-align: center;
+  color: #ccc;
+  font-weight: bold;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  /* Para que esté sobre la línea */
+}
+
+/* Íconos de cada paso */
+.step .icon {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+/* Paso completado */
+.step.completed {
+  color: #00CBC1;
+}
+
+.step.completed .icon {
+  background: #00CBC1;
+  color: white;
+}
+
+/* Paso activo */
+.step.active {
+  color: #003B64;
+}
+
+.step.active .icon {
+  background: #003B64;
+  color: white;
+}
+
+/* Línea activa de progreso (se pinta hasta el paso activo) */
+.step.completed~.progress-line {
+  background: #00CBC1;
+  transition: 0.3s ease-in-out;
 }

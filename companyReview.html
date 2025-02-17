@@ -12,22 +12,36 @@
 <body>
 
   <!-- 🔹 Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="dashboard.html">
-        <img src="public/asclepio_logo.png" alt="Asclepio Logo">
-      </a>
-    </div>
-    <div class="nav-container">
-      <ul class="nav-links">
-        <li><a href="dashboard.html">INICIO</a></li>
-        <li><a href="noticias.html">NOTICIAS</a></li>
-        <li><a href="portfolio.html">PORTFOLIO</a></li>
-        <li><a href="inversiones.html">INVERSIONES</a></li>
-        <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+<nav class="navbar">
+  <div class="logo">
+    <a href="dashboard.html">
+      <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+    </a>
+  </div>
+
+  <div class="burger-menu" id="burger-menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="dashboard.html" class="active">INICIO</a></li>
+      <li><a href="noticias.html">NOTICIAS</a></li>
+      <li><a href="portfolio.html">PORTFOLIO</a></li>
+      <li><a href="inversiones.html">INVERSIONES</a></li>
+      <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+    </ul>
+    <div class="account" id="account">
+      <div class="account-btn" id="account-btn">RS</div>
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+        <li><a href="index.html">Logout</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- 🔹 Pestañas -->
   <div class="tabs-container">
