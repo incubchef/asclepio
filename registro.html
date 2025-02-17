@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCLEPIO - Registro</title>
+  <link rel="stylesheet" href="src/registro.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="modal">
+      <!-- Lado izquierdo con logo -->
+      <div class="modal-left">
+        <img src="public/asclepio_logo.png" alt="Logo" class="logo">
+      </div>
+
+      <!-- Lado derecho con formulario y progreso -->
+      <div class="modal-right">
+        <!-- Barra de progreso -->
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="step completed">
+              <span class="icon">🔒</span>
+              <p>Datos login</p>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="step">
+              <span class="icon user-icon">👤</span>
+              <p>Búsqueda perfil</p>
+            </div>
+            <div class="progress-line"></div>
+            <div class="step">
+              <span class="icon">🏁</span>
+              <p>Validación perfil</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="modal-content">
+          <h2>Crear Tu Cuenta</h2>
+
+          <form action="perfil.html" method="GET">
+            <label for="first-name">Nombre</label>
+            <input type="text" id="first-name" required placeholder="Tu nombre">
+
+            <label for="last-name">Apellido</label>
+            <input type="text" id="last-name" required placeholder="Tu apellido">
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" required placeholder="Ingresa tu email">
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" required placeholder="Crea una contraseña">
+
+            <div class="button-group">
+              <a href="index.html" class="back-arrow">⬅ Volver</a>
+              <button type="submit">Siguiente</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

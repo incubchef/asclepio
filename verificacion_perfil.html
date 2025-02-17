@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCLEPIO - Verificación de Perfil</title>
+  <link rel="stylesheet" href="src/perfil.css">
+    <link rel="stylesheet" href="src/verificacion_perfil.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="modal">
+      <!-- Lado izquierdo con logo -->
+      <div class="modal-left">
+        <img src="public/asclepio_logo.png" alt="Logo" class="logo">
+      </div>
+      <!-- Lado derecho con formulario y progreso -->
+      <div class="modal-right">
+        <!-- Barra de progreso -->
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="step">
+              <span class="icon">🔒</span>
+              <p>Datos login</p>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="step">
+              <span class="icon user-icon">👤</span>
+              <p>Búsqueda perfil</p>
+            </div>
+            <div class="progress-line"></div>
+            <div class="step completed">
+              <span class="icon">🏁</span>
+              <p>Validación perfil</p>
+            </div>
+          </div>
+
+        <h2>Confirma tu Información</h2>
+
+        <form action="dashboard.html" method="GET">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" value="Rafael" required>
+
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" value="Simó Canonge" required>
+
+          <label for="alias">Alias</label>
+          <input type="text" id="alias" value="1234567890" required>
+
+          <label for="especialidad">Especialidad</label>
+          <input type="text" id="especialidad" value="Cardiología" required>
+
+          <label for="centro">Centro de Trabajo Principal</label>
+          <input type="text" id="centro" value="Hospital General" required>
+
+          <label for="historia">Historia</label>
+          <textarea id="historia" required>Especialista en cardiología con 20 años de experiencia...</textarea>
+
+          <label for="links">Links de Interés</label>
+          <input type="url" id="links" value="https://example.com/publicacion1" required>
+          <input type="url" id="links2" value="https://example.com/publicacion2" required>
+
+          <button type="submit">Validar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

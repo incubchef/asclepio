@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCLEPIO - Registro</title>
+  <link rel="stylesheet" href="src/perfil.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="modal">
+      <!-- Lado izquierdo con logo -->
+      <div class="modal-left">
+        <img src="public/asclepio_logo.png" alt="Logo" class="logo">
+      </div>
+
+      <!-- Lado derecho con formulario y progreso -->
+      <div class="modal-right">
+        <!-- Barra de progreso -->
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="step">
+              <span class="icon">🔒</span>
+              <p>Datos login</p>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="step completed">
+              <span class="icon user-icon">👤</span>
+              <p>Búsqueda perfil</p>
+            </div>
+            <div class="progress-line"></div>
+            <div class="step">
+              <span class="icon">🏁</span>
+              <p>Validación perfil</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <h2>Verificación de Identidad</h2>
+
+        <form id="perfil-form">
+          <label for="cob">Número de COB</label>
+          <input type="text" id="cob" name="cob" required placeholder="Ingresa tu número de COB">
+
+          <label for="verification-code">Código de Verificación</label>
+          <input type="text" id="verification-code" name="verification-code" required
+            placeholder="Código enviado al correo">
+
+          <div class="button-group">
+            <a href="registro.html" class="back-arrow">⬅ Volver</a>
+            <button type="submit">Siguiente</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de carga -->
+  <div class="loading-modal" id="loadingModal">
+    <div class="loading-content">
+      <p>Estamos completando los datos de tu perfil...</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("perfil-form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita el envío inmediato del formulario
+
+      // Mostrar modal
+      document.getElementById("loadingModal").style.display = "flex";
+
+      // Esperar 8 segundos antes de redirigir
+      setTimeout(() => {
+        window.location.href = "verificacion_perfil.html";
+      }, 8000);
+    });
+  </script>
+
+</body>
+
+</html>

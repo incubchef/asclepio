@@ -12,8 +12,8 @@ body {
 /* Contenedor del modal */
 .modal {
   display: flex;
-  width: 750px;
-  height: 450px;
+  width: 600px;
+  height: 420px;
   background: white;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -41,48 +41,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 .modal-right h2 {
   color: #003B64;
-  text-align: center;
   margin-bottom: 20px;
 }
 
-/* Pestañas */
-.tabs {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.tabs a {
-  flex: 1;
-  text-align: center;
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  color: #003B64;
-  border-bottom: 3px solid transparent;
-  transition: 0.3s;
-}
-
-.tabs a.active {
-  border-bottom: 3px solid #00CBC1;
-  color: #00CBC1;
-}
-
-/* Formularios */
-.form-container {
-  display: none;
-}
-
-.form-container.active {
-  display: block;
-}
-
-/* Inputs y Botón */
+/* Inputs */
 input {
   width: 100%;
   padding: 12px;
@@ -92,6 +59,7 @@ input {
   font-size: 14px;
 }
 
+/* Botón */
 button {
   width: 100%;
   background-color: #00CBC1;
@@ -122,146 +90,19 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Mejora la visibilidad de la pestaña activa */
-.tabs a.active {
-  border-bottom: 3px solid #00CBC1;
+/* Link de registro */
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
   color: #00CBC1;
+  text-decoration: none;
   font-weight: bold;
 }
 
-/* Formularios: solo muestra el activo */
-.form-container {
-  display: none;
-}
-
-.form-container.active {
-  display: block;
-}
-
-/* 🔹 Tablets y pantallas más pequeñas (Menos de 1024px) */
-@media (max-width: 1024px) {
-  .modal {
-    width: 90%;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .modal-left {
-    width: 100%;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .modal-right {
-    width: 100%;
-    padding: 30px;
-  }
-
-  .logo {
-    max-width: 140px;
-  }
-}
-
-/* 🔹 Mejoramos el diseño en pantallas pequeñas */
-@media (max-width: 1024px) {
-  .modal {
-    width: 90%;
-    max-width: 500px;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 12px;
-    /* Bordes más redondeados */
-    overflow: hidden;
-    /* Evita desbordamientos */
-    padding-bottom: 20px;
-  }
-
-  .modal-left {
-    width: 100%;
-    height: 130px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  }
-
-  .modal-right {
-    width: 100%;
-    padding: 30px;
-  }
-
-  .logo {
-    max-width: 120px;
-  }
-}
-
-/* 🔹 Ajustes para móviles */
-@media (max-width: 768px) {
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: 100vh;
-  }
-
-  .modal {
-    width: 90%;
-    max-width: 400px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    /* 🟢 Espaciado interno */
-  }
-
-  .modal-left {
-    height: 100px;
-  }
-
-  .logo {
-    max-width: 100px;
-  }
-
-  .modal-right {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    /* Centrar elementos */
-  }
-
-  .tabs {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .tabs a {
-    padding: 10px;
-  }
-
-  /* 🟢 Reducimos el tamaño de los inputs */
-  input {
-    font-size: 14px;
-    padding: 10px;
-    width: 90%;
-    /* Ahora son más pequeños */
-    margin: 5px auto;
-    /* Centrados */
-    display: block;
-  }
-
-  /* 🟢 Botones más pequeños */
-  button {
-    font-size: 14px;
-    padding: 10px 20px;
-    width: auto;
-    /* Solo ocupa el tamaño del texto */
-    display: block;
-    margin: 10px auto;
-    border-radius: 8px;
-  }
+.register-link a:hover {
+  text-decoration: underline;
 }

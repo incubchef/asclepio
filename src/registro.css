@@ -1,0 +1,212 @@
+/* Fondo igual al login */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #fff, #00CBC1, #006AB4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor modal */
+.modal {
+  display: flex;
+  width: 750px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Lado izquierdo (Logo) */
+.modal-left {
+  background: #003B64;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+/* Lado derecho (Formulario) */
+.modal-right {
+  padding: 40px;
+  flex: 1;
+  text-align: center;
+}
+
+/* Barra de progreso */
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.step {
+  width: 30%;
+  text-align: center;
+  position: relative;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.step .icon {
+  display: block;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 5px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step.completed .icon {
+  background: #00CBC1;
+  color: white;
+}
+
+.step.active {
+  color: #003B64;
+}
+
+.step.active .icon {
+  background: #003B64;
+  color: white;
+}
+
+/* ICONO DE USER PROFILE EN BLANCO */
+.user-icon {
+  color: white !important;
+}
+
+/* Formulario */
+.modal-content {
+  text-align: left;
+}
+
+.modal-content h2 {
+  text-align: center;
+  color: #003B64;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  background-color: #00CBC1;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #009B94;
+}
+
+/* Contenedor de la barra de progreso */
+.progress-container {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Pasos de la barra de progreso */
+.step {
+  width: 30%;
+  text-align: center;
+  position: relative;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.step .icon {
+  display: block;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 5px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para pasos completados */
+.step.completed .icon {
+  background: #00CBC1;
+  color: white;
+}
+
+/* Estilos para el paso activo */
+.step.active {
+  color: #003B64;
+}
+
+.step.active .icon {
+  background: #003B64;
+  color: white;
+}
+
+/* Línea de conexión entre pasos */
+.progress-line {
+  flex-grow: 1;
+  height: 4px;
+  background: #ccc;
+  margin: 0 5px;
+}
+
+.progress-line.active {
+  background: #00CBC1;
+}
+
+/* ICONO USER PROFILE BLANCO */
+.user-icon {
+  color: white !important;
+}
+
+/* Grupo de botones */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* Estilo para la flecha de regreso */
+.back-arrow {
+  text-decoration: none;
+  color: #003B64;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.back-arrow:hover {
+  color: #009B94;
+}
