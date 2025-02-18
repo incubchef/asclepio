@@ -66,29 +66,113 @@
     </div>
   </div>
 
-  <!-- 🔹 Formulario de Evaluación -->
+  <!-- 🔹 Contenedor del formulario -->
   <div class="evaluation-container">
-    <h2>Formulario de Evaluación</h2>
-    <form class="evaluation-form">
-      <label for="criterio1">Criterio 1:</label>
-      <input type="text" id="criterio1" name="criterio1" placeholder="Ingrese su evaluación">
-
-      <label for="criterio2">Criterio 2:</label>
-      <input type="text" id="criterio2" name="criterio2" placeholder="Ingrese su evaluación">
-
-      <label for="comentarios">Comentarios:</label>
-      <textarea id="comentarios" name="comentarios" rows="4" placeholder="Ingrese sus comentarios"></textarea>
-
-      <!-- 🔹 Botones: Guardar Borrador | Enviar | Cancelar -->
-      <div class="evaluation-buttons">
-        <button type="button" class="btn-draft">Guardar Borrador</button>
-        <button type="submit" class="btn-submit">Enviar</button>
-        <button type="button" class="btn-cancel">Cancelar</button>
+    <h2>Test de Evaluación en Endocrinología</h2>
+  
+    <form id="evaluation-form">
+      <div class="question-container active">
+        <h3>1. ¿Cuál es la hormona principal en el control del metabolismo?</h3>
+        <label><input type="checkbox" name="q1" value="Insulina"> Insulina</label>
+        <label><input type="checkbox" name="q1" value="Glucagón"> Glucagón</label>
+        <label><input type="checkbox" name="q1" value="Cortisol"> Cortisol</label>
+        <label><input type="checkbox" name="q1" value="Tiroxina"> Tiroxina</label>
+                <h3>¿Tienes algún comentario adicional sobre la pregunta?</h3>
+                <textarea name="q5" placeholder="Escribe aquí..."></textarea>
       </div>
+  
+      <div class="question-container">
+        <h3>2. ¿Qué glándula es la encargada de regular el metabolismo?</h3>
+        <label><input type="checkbox" name="q2" value="Tiroides"> Tiroides</label>
+        <label><input type="checkbox" name="q2" value="Hipófisis"> Hipófisis</label>
+        <label><input type="checkbox" name="q2" value="Suprarrenales"> Suprarrenales</label>
+        <label><input type="checkbox" name="q2" value="Páncreas"> Páncreas</label>
+                        <h3>¿Tienes algún comentario adicional sobre la pregunta?</h3>
+                        <textarea name="q5" placeholder="Escribe aquí..."></textarea>
+      </div>
+  
+      <div class="question-container">
+        <h3>3. ¿Cuál es la principal función de la insulina?</h3>
+        <label><input type="checkbox" name="q3" value="Aumentar el nivel de azúcar en sangre"> Aumentar el nivel de azúcar
+          en sangre</label>
+        <label><input type="checkbox" name="q3" value="Reducir el nivel de azúcar en sangre"> Reducir el nivel de azúcar
+          en sangre</label>
+        <label><input type="checkbox" name="q3" value="Regular el metabolismo del calcio"> Regular el metabolismo del
+          calcio</label>
+        <label><input type="checkbox" name="q3" value="Controlar la presión arterial"> Controlar la presión
+          arterial</label>
+                          <h3>¿Tienes algún comentario adicional sobre la pregunta?</h3>
+                          <textarea name="q5" placeholder="Escribe aquí..."></textarea>
+      </div>
+  
+      <div class="question-container">
+        <h3>4. ¿Qué hormona se libera en respuesta al estrés?</h3>
+        <label><input type="checkbox" name="q4" value="Insulina"> Insulina</label>
+        <label><input type="checkbox" name="q4" value="Glucagón"> Glucagón</label>
+        <label><input type="checkbox" name="q4" value="Cortisol"> Cortisol</label>
+        <label><input type="checkbox" name="q4" value="Adrenalina"> Adrenalina</label>
+                        <h3>¿Tienes algún comentario adicional sobre la pregunta?</h3>
+                        <textarea name="q5" placeholder="Escribe aquí..."></textarea>
+      </div>
+  
+      <div class="question-container">
+        <h3>5. ¿Tienes algún comentario adicional sobre el test?</h3>
+        <textarea name="q5" placeholder="Escribe aquí..."></textarea>
+      </div>
+  
+      <!-- 🔹 Botones de navegación -->
+      <div class="navigation-buttons">
+        <button type="button" id="prev-btn" disabled>⬅ Anterior</button>
+        <button type="button" id="next-btn">Siguiente ➡</button>
+      </div>
+  
+      <!-- 🔹 Botón de envío -->
+      <button type="submit" id="submit-btn" style="display: none;">Enviar</button>
     </form>
   </div>
 
   <script src="src/burger.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+      const questions = document.querySelectorAll(".question-container");
+      let currentQuestion = 0;
+
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+      const submitBtn = document.getElementById("submit-btn");
+
+      function updateQuestion() {
+        questions.forEach((q, index) => {
+          q.classList.toggle("active", index === currentQuestion);
+        });
+
+        prevBtn.disabled = currentQuestion === 0;
+        nextBtn.style.display = currentQuestion === questions.length - 1 ? "none" : "inline-block";
+        submitBtn.style.display = currentQuestion === questions.length - 1 ? "inline-block" : "none";
+      }
+
+      prevBtn.addEventListener("click", function () {
+        if (currentQuestion > 0) {
+          currentQuestion--;
+          updateQuestion();
+        }
+      });
+
+      nextBtn.addEventListener("click", function () {
+        if (currentQuestion < questions.length - 1) {
+          currentQuestion++;
+          updateQuestion();
+        }
+      });
+
+      document.getElementById("evaluation-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("✅ Test enviado con éxito. ¡Gracias por tu evaluación!");
+        window.location.href = "dashboard.html";
+      });
+
+      updateQuestion();
+    });
+</script>
 </body>
 
 </html>

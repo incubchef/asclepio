@@ -277,3 +277,26 @@ button:hover {
   background: #00CBC1;
   transition: 0.3s ease-in-out;
 }
+
+.hidden {
+  display: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+button:hover {
+  opacity: 0.8;
+}

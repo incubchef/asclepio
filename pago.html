@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCLEPIO - Pago</title>
+  <link rel="stylesheet" href="src/registro.css">
+  <link rel="stylesheet" href="src/pago.css">
+  <script defer src="src/pago.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="modal">
+      <div class="modal-left">
+        <img src="public/asclepio_logo.png" alt="Logo" class="logo">
+      </div>
+
+      <div class="modal-right">
+        <div class="modal-content">
+          <h2>Pago Seguro</h2>
+
+          <label>Tarjetas Aceptadas</label>
+          <div class="payment-icons">
+            <img src="public/visa.svg" alt="Visa">
+            <img src="public/mastercard.png" alt="Mastercard">
+            <img src="public/AE.png" alt="American Express">
+          </div>
+
+          <form id="form-pago">
+            <label for="card-number">Número de Tarjeta</label>
+            <input type="text" id="card-number" required placeholder="1234 5678 9012 3456">
+
+            <label for="card-holder">Nombre del Titular</label>
+            <input type="text" id="card-holder" required placeholder="Tu Nombre">
+
+            <label for="expiry-date">Fecha de Expiración (MM/YY)</label>
+            <input type="text" id="expiry-date" required placeholder="MM/YY">
+
+            <label for="cvc">Código CVC</label>
+            <input type="text" id="cvc" required placeholder="123">
+
+            <div class="payment-amount">
+              <p>Total a Pagar: <strong>100,00€</strong></p>
+            </div>
+
+            <div class="button-group">
+              <a href="index.html" class="back-arrow">CANCELAR</a>
+              <button type="submit" id="btn-pagar">PAGAR</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔹 Modal de Procesamiento -->
+  <div id="paymentModal" class="loading-modal">
+    <div class="loading-content">
+      <p id="modal-text">Procesando tu pago...</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

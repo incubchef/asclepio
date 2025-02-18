@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="public/favicon.png" type="image/png">
+  <title>Mi Cuenta - ASCLEPIO</title>
+  <link rel="stylesheet" href="src/mi-cuenta.css">
+  <link rel="stylesheet" href="src/navbar.css">
+  <script defer src="src/micuenta.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="dashboard.html">
+        <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+      </a>
+    </div>
+
+    <div class="burger-menu" id="burger-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="dashboard.html">INICIO</a></li>
+        <li><a href="noticias.html">NOTICIAS</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="inversiones.html">INVERSIONES</a></li>
+        <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+      </ul>
+      <div class="account" id="account">
+        <div class="account-btn" id="account-btn">RS</div>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a href="mi-cuenta.html" class="active">Mi Cuenta</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Datos personales</h2>
+
+<form action="dashboard.html" method="GET">
+  <label for="nombre">Nombre</label>
+  <input type="text" id="nombre" value="Rafael" required>
+
+  <label for="apellidos">Apellidos</label>
+  <input type="text" id="apellidos" value="Simó Canonge" required>
+
+  <label for="alias">Alias</label>
+  <input type="text" id="alias" value="1234567890" required>
+
+  <label for="especialidad">Especialidad</label>
+  <input type="text" id="especialidad" value="Endocrinología y Nutrición" required>
+
+  <label for="centro">Centro de Trabajo Principal</label>
+  <input type="text" id="centro" value="Hospital Universitario Vall d'Hebron" required>
+
+  <label for="historia">Historia</label>
+  <textarea id="historia" required>El Dr. Simó Canonge es jefe del Servicio de Endocrinología y Nutrición en el Hospital Universitario Vall d'Hebron y profesor titular de Medicina y Endocrinología en la Universitat Autònoma de Barcelona (UAB). Coordina el grupo de investigación en Diabetes y Metabolismo en el Vall d'Hebron Institut de Recerca (VHIR), reconocido internacionalmente por sus avances en la retinopatía diabética. En 2022, fue galardonado con el Premio Alberto Sols por la Sociedad Española de Diabetes, en reconocimiento a su destacada trayectoria en la investigación de la diabetes. Además, en 2023, ingresó como Académico Correspondiente en la Reial Acadèmia de Medicina de Catalunya, presentando el trabajo titulado "Screening for diabetic retinopathy: new perspectives and challenges".</textarea>
+
+  <label for="links">Links de Interés</label>
+  <input type="url" id="links" value="https://orcid.org/0000-0003-0475-3096" required>
+  <input type="url" id="links2" value="https://ramc.cat/wp-content/uploads/2024/04/revista-RAMC-38.3.4.pdf" required>
+  
+  <button type="submit" id="submit-button">Guardar</button>
+</form>
+
+
+    <!-- Sección Compartir -->
+    <div class="share-section">
+      <h3>Comparte tu Código Referral</h3>
+      <h5>Comparte este código con familiares que les pueda interesar ASCLEPIO</h5>
+      <div class="share-container">
+        <input type="text" id="referral-link" value="www.asclepio.com/id=1234567890" readonly>
+        <button id="copy-button">Copiar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/burger.js"></script>
+</body>
+
+</html>

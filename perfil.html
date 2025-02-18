@@ -51,9 +51,6 @@
           <label for="cob">Número de COB</label>
           <input type="text" id="cob" name="cob" required placeholder="Ingresa tu número de COB">
 
-          <label for="verification-code">Código de Verificación</label>
-          <input type="text" id="verification-code" name="verification-code" required
-            placeholder="Código enviado al correo">
 
           <div class="button-group">
             <a href="registro.html" class="back-arrow">⬅ Volver</a>
@@ -67,7 +64,7 @@
   <!-- Modal de carga -->
   <div class="loading-modal" id="loadingModal">
     <div class="loading-content">
-      <p>Estamos completando los datos de tu perfil...</p>
+      <p>Estamos validando tu número del COB...</p>
     </div>
   </div>
 
@@ -80,7 +77,7 @@
 
       // Esperar 8 segundos antes de redirigir
       setTimeout(() => {
-        window.location.href = "verificacion_perfil.html";
+        window.location.href = "pago.html";
       }, 8000);
     });
   </script>

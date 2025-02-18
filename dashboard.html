@@ -79,7 +79,8 @@
           <p class="evaluacion-company"><strong>Vita</strong></p>
           <p class="evaluacion-title">MindHorizon</p>
         </div>
-        <button class="evaluacion-btn estado-nuevo">Nuevo</button>
+        <button class="evaluacion-btn estado-nuevo" id="reset-evaluacion">Nuevo</button>
+
       </div>
             <div class="evaluacion-item">
               <img src="public/logo_careplus.png" alt="Empresa 3" class="evaluacion-icon">
@@ -173,6 +174,13 @@
   });
 
   document.getElementById('today-date').textContent = `${dateString}`;
+</script>
+<script>
+  document.getElementById("reset-evaluacion").addEventListener("click", function () {
+    localStorage.removeItem("evaluadorAceptado"); // Borrar estado de evaluación
+    sessionStorage.removeItem("modalMostrado");  // Permitir que el modal vuelva a aparecer
+    window.location.href = "CompanyNew.html";    // Redirigir a la página de evaluación
+  });
 </script>
 
 </body>

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ASCLEPIO - Registro</title>
   <link rel="stylesheet" href="src/registro.css">
+  <script defer src="src/registro.js"></script>
 </head>
 
 <body>
@@ -20,37 +21,29 @@
       <div class="modal-right">
 
         <!-- Barra de progreso -->
-<!-- Contenedor de la barra de progreso -->
-<div class="progress-container">
-  <!-- Línea de progreso de fondo -->
-  <div class="progress-line"></div>
+        <div class="progress-container">
+          <div class="progress-line"></div>
 
-  <!-- Pasos -->
-  <div class="progress-bar">
-    <div class="step completed">
-      <span class="icon">🔒</span>
-      <p>Datos login</p>
-    </div>
+          <div class="progress-bar">
+            <div class="step completed">
+              <span class="icon">🔒</span>
+              <p>Datos login</p>
+            </div>
+            <div class="step">
+              <span class="icon user-icon">👤</span>
+              <p>Búsqueda perfil</p>
+            </div>
+            <div class="step">
+              <span class="icon">🏁</span>
+              <p>Validación perfil</p>
+            </div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="icon user-icon">👤</span>
-      <p>Búsqueda perfil</p>
-    </div>
-
-    <div class="step">
-      <span class="icon">🏁</span>
-      <p>Validación perfil</p>
-    </div>
-  </div>
-</div>
-
-
-
-        <!-- Formulario -->
-        <div class="modal-content">
+        <!-- Formulario de Registro -->
+        <div class="modal-content" id="register-form">
           <h2>Crear Tu Cuenta</h2>
-
-          <form action="perfil.html" method="GET">
+          <form id="form-registro">
             <label for="first-name">Nombre</label>
             <input type="text" id="first-name" required placeholder="Tu nombre">
 
@@ -65,13 +58,47 @@
 
             <div class="button-group">
               <a href="index.html" class="back-arrow">⬅ Volver</a>
-              <button type="submit">Siguiente</button>
+              <button type="button" id="btn-siguiente">Siguiente</button>
             </div>
           </form>
         </div>
+
+        <!-- Verificación de Código -->
+        <div class="modal-content hidden" id="verification-form">
+          <h2>Verificación de Email</h2>
+          <p>Hemos enviado un código de verificación a <strong>********@gmail.com</strong></p>
+
+          <label for="verification-code">Código de Verificación</label>
+          <input type="text" id="verification-code" required placeholder="Ingresa el código">
+
+          <div class="button-group">
+            <a href="index.html" class="back-arrow">⬅ Volver</a>
+            <button type="button" id="btn-validar">Validar</button>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
+
+
+  <script>document.addEventListener("DOMContentLoaded", function () {
+      const btnSiguiente = document.getElementById("btn-siguiente");
+      const btnValidar = document.getElementById("btn-validar");
+
+      const registerForm = document.getElementById("register-form");
+      const verificationForm = document.getElementById("verification-form");
+
+      btnSiguiente.addEventListener("click", function () {
+        registerForm.classList.add("hidden");
+        verificationForm.classList.remove("hidden");
+      });
+
+      btnValidar.addEventListener("click", function () {
+        window.location.href = "perfil.html";
+      });
+    });
+</script>
 </body>
 
 </html>
