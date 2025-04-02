@@ -41,3 +41,30 @@ switchTab(0);
 
 
 
+function actualizarEstadoEvaluacion() {
+    const btnNuevo = document.getElementById("reset-evaluacion");
+    if (!btnNuevo) return; // Evita errores si el botón no existe
+
+    const btnEvaluando = document.createElement("button");
+    btnEvaluando.className = "evaluacion-btn estado-dd";
+    btnEvaluando.innerText = "Evaluando";
+
+    const btnDesestimado = document.createElement("button");
+    btnDesestimado.className = "evaluacion-btn estado-rech";
+    btnDesestimado.innerText = "Desestimado";
+
+    // 🔹 Verifica el estado guardado en localStorage
+    if (localStorage.getItem("evaluadorAceptado") === "true") {
+        btnNuevo.replaceWith(btnEvaluando);
+    } else if (localStorage.getItem("evaluadorAceptado") === "false") {
+        btnNuevo.replaceWith(btnDesestimado);
+    }
+}
+
+// Ejecutar en dashboard.html
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname.includes("dashboard.html")) {
+        actualizarEstadoEvaluacion();
+    }
+});
+

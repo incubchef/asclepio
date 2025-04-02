@@ -219,3 +219,60 @@ header {
   align-items: center;
   text-align: center;
 }
+
+
+                     /* Estilos adicionales para el triángulo y el posicionamiento */
+                     .progress-container {
+                       position: relative;
+                       margin-top: 30px;
+                       margin-bottom: 30px;
+                     }
+          
+                     .triangle-indicator {
+                       width: 0;
+                       height: 0;
+                       border-left: 10px solid transparent;
+                       border-right: 10px solid transparent;
+                       border-bottom: 10px solid #333;
+                       position: absolute;
+                       top: 100%;
+                       transform: translateX(-50%);
+                       margin-top: 5px;
+                     }
+          
+                     .percentage-value {
+                       position: absolute;
+                       font-size: 12px;
+                       font-weight: bold;
+                       top: 100%;
+                       transform: translateX(-50%);
+                       margin-top: 16px;
+                     }
+          
+                     .progress-info {
+                       display: flex;
+                       justify-content: space-between;
+                       margin-bottom: 10px;
+                     }
+          
+                     .objetivo-info {
+                       text-align: right;
+                     }
+          
+                     .inversion-info {
+                       position: absolute;
+                       top: -25px;
+                       left: 67%;
+                        color:darkred;
+                       transform: translateX(-50%);
+                       font-size: 16px;
+                     }
+          
+                     .invertido-info {
+                       margin-top: 10px;
+                       text-align: center;
+                     }
+
+
+
+                     

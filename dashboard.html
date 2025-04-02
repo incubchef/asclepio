@@ -9,6 +9,68 @@
   <link rel="stylesheet" href="src/dashboard.css">
   <link rel="stylesheet" href="src/navbar.css">
   <script defer src="src/micuenta.js"></script>
+  <script>
+  function actualizarEstadoEvaluacion() {
+    const btnNuevo = document.getElementById("reset-evaluacion");
+    if (!btnNuevo) return; // Evita errores si el botón no existe
+
+    // Crear botones dinámicamente
+    const btnEvaluando = document.createElement("button");
+    btnEvaluando.className = "evaluacion-btn estado-dd";
+    btnEvaluando.innerText = "Evaluando";
+    btnEvaluando.id = "reset-evaluacion"; // 🔹 Asigna el mismo ID para mantener funcionalidad
+
+    const btnDesestimado = document.createElement("button");
+    btnDesestimado.className = "evaluacion-btn estado-rech";
+    btnDesestimado.innerText = "Desestimado";
+    btnDesestimado.id = "reset-evaluacion"; // 🔹 Mismo ID
+
+    // Función para resetear el estado de evaluación
+    function resetEvaluacion() {
+      localStorage.removeItem("evaluadorAceptado"); // Borrar estado de evaluación
+      sessionStorage.removeItem("modalMostrado");  // Permitir que el modal vuelva a aparecer
+      window.location.href = "CompanyNew.html";    // Redirigir a la página de evaluación
+    }
+
+    // Agregar evento a los nuevos botones
+    btnEvaluando.addEventListener("click", resetEvaluacion);
+    btnDesestimado.addEventListener("click", resetEvaluacion);
+
+    // 🔹 Verifica el estado guardado en localStorage y reemplaza el botón
+    if (localStorage.getItem("evaluadorAceptado") === "true") {
+      btnNuevo.replaceWith(btnEvaluando);
+    } else if (localStorage.getItem("evaluadorAceptado") === "false") {
+      btnNuevo.replaceWith(btnDesestimado);
+    } else {
+      btnNuevo.addEventListener("click", resetEvaluacion);
+    }
+  }
+
+  // Ejecutar en dashboard.html
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname.includes("dashboard.html")) {
+      actualizarEstadoEvaluacion();
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const logoutLink = document.querySelector('a[href="index.html"]'); // Seleccionar el botón Logout
+
+    if (logoutLink) {
+      logoutLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita la redirección inmediata
+
+        // 🔹 Resetear estado de evaluación
+        localStorage.removeItem("evaluadorAceptado");
+        sessionStorage.removeItem("modalMostrado");
+
+        // 🔹 Redirigir a la página de inicio
+        window.location.href = "index.html";
+      });
+    }
+  });
+
+    </script>
 </head>
 
 <body>
@@ -79,6 +141,7 @@
           <p class="evaluacion-company"><strong>Vita</strong></p>
           <p class="evaluacion-title">MindHorizon</p>
         </div>
+        <div id="evaluacion-boton-container"></div>
         <button class="evaluacion-btn estado-nuevo" id="reset-evaluacion">Nuevo</button>
 
       </div>
@@ -88,7 +151,7 @@
                 <p class="evaluacion-company"><strong>Careplus</strong></p>
                 <p class="evaluacion-title">XXXX</p>
               </div>
-              <button class="evaluacion-btn estado-dd">Science DD</button>
+              <button class="evaluacion-btn estado-dd">Evaluando</button>
             </div>
     </div>
   </div>

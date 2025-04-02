@@ -63,17 +63,34 @@
 
 
       <div class="progress">
-        <p>Inversión conseguida: <strong>1.000.000€</strong></p>
-        <p>Objetivo: <strong>1.500.000€</strong></p>
-        <p>Invertido: <strong>5.000€</strong></p>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 67%;"></div>
+        <div class="progress-info">
+          <div></div> <!-- Espacio vacío para alinear objetivo a la derecha -->
+          <div class="objetivo-info">
+            <p>Objetivo: <strong>1.500.000€</strong></p>
+          </div>
+        </div>
+      
+        <div class="progress-container">
+          <div class="inversion-info">
+            <p><strong>1.000.000€</strong></p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 67%;"></div>
+          </div>
+          <!-- El triángulo indicador se posicionará según el porcentaje -->
+          <div class="triangle-indicator" style="left: 67%;"></div>
+          <!-- El valor del porcentaje se muestra debajo del triángulo -->
+          <div class="percentage-value" style="left: 67%;">67%</div>
+        </div>
+      </div>
+      
+      <div class="actions">
+        <span class="active-status">Invertida</span>
+        <div class="invertido-info">
+          <p>Capital: <strong>5.000€</strong></p>
         </div>
       </div>
 
-      <div class="actions">
-        <button class="share-btn">Invertida</button>
-      </div>
       <!-- 🔹 Documentos Adjuntos -->
       <div class="documents-section">
         <h3>Documentos Adjuntos</h3>

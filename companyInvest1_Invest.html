@@ -55,48 +55,66 @@
     </header>
 
     <section class="video-section">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Sight Video"
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Rx9ED1V95ak?si=6wCxy3KZp1YI_eym" title="Sight Video"
         frameborder="0" allowfullscreen></iframe>
     </section>
-
-    <section class="investment-details">
  
-
-      <div class="progress">
-        <p>Inversión conseguida: <strong>850.000€</strong></p>
-        <p>Objetivo: <strong>700.000€</strong></p>
-        <p>Invertido: <strong>40.000€ (4,70%)</strong></p>
+  <section class="investment-details">
+  
+    <div class="progress">
+      <div class="progress-info">
+        <div></div> <!-- Espacio vacío para alinear objetivo a la derecha -->
+        <div class="objetivo-info">
+          <p>Objetivo: <strong>700.000€</strong></p>
+        </div>
+      </div>
+  
+      <!-- Nuevo: Valor de inversión debajo del objetivo y encima de la barra -->
+      <div class="inversion-info">
+        <p><strong>850.000€</strong></p>
+      </div>
+  
+      <div class="progress-container">
         <div class="progress-bar">
-          <div class="progress-fill" style="width: 121.6%;"></div>
+          <div class="progress-fill" style="width: 100%;"></div> <!-- Limitado al 100% visualmente -->
         </div>
+        <!-- El triángulo indicador se posicionará según el porcentaje -->
+        <div class="triangle-indicator" style="left: 100%;"></div>
+        <!-- El valor del porcentaje se muestra debajo del triángulo -->
+        <div class="percentage-value" style="left: 100%;">121%</div>
       </div>
-
-      <div class="actions">
-        <button class="share-btn">Invertida</button>
+    </div>
+  
+    <div class="actions">
+      <span class="active-status">Invertida</span>
+      <div class="invertido-info">
+        <p>Capital: <strong>40.000€</strong></p>
       </div>
-        <!-- 🔹 Documentos Adjuntos -->
-        <div class="documents-section">
-          <h3>Documentos Adjuntos</h3>
-          <div class="document-list">
-            <a href="docs/business_report.pdf" download>
-              <img src="public/pdf.png" alt="PDF">
-              <p>Poderes notariales</p>
-            </a>
-            <a href="docs/tech_specs.pdf" download>
-              <img src="public/pdf.png" alt="PDF">
-              <p>Contrato de inversión</p>
-            </a>
-            <a href="docs/patents.pdf" download>
-              <img src="public/pdf.png" alt="PDF">
-              <p>Acuerdo de confidencialidad (NDA)</p>
-            </a>
-                        <a href="docs/patents.pdf" download>
-                          <img src="public/pdf.png" alt="PDF">
-                          <p>Contrato de suscripción de acciones</p>
-                        </a>
-          </div>
-        </div>
-    </section>
+    </div>
+  
+    <!-- 🔹 Documentos Adjuntos -->
+    <div class="documents-section">
+      <h3>Documentos Adjuntos</h3>
+      <div class="document-list">
+        <a href="docs/business_report.pdf" download>
+          <img src="public/pdf.png" alt="PDF">
+          <p>Poderes notariales</p>
+        </a>
+        <a href="docs/tech_specs.pdf" download>
+          <img src="public/pdf.png" alt="PDF">
+          <p>Contrato de inversión</p>
+        </a>
+        <a href="docs/patents.pdf" download>
+          <img src="public/pdf.png" alt="PDF">
+          <p>Acuerdo de confidencialidad (NDA)</p>
+        </a>
+        <a href="docs/patents.pdf" download>
+          <img src="public/pdf.png" alt="PDF">
+          <p>Contrato de suscripción de acciones</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
     <section class="company-info">
       <p>

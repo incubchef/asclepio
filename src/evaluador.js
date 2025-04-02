@@ -35,5 +35,24 @@ function aceptarEvaluador() {
 // Denegar Evaluador → Solo cierra el modal
 function denegarEvaluador() {
     document.getElementById("evaluadorModal").style.display = "none";
+    localStorage.setItem("evaluadorAceptado", "false"); // Guardar estado de rechazo
     alert("Has denegado la solicitud de evaluador.");
+}
+
+// 🔄 Función para actualizar la UI en la página de evaluación
+function actualizarEstadoEvaluacion() {
+    const btnNuevo = document.getElementById("reset-evaluacion");
+    const btnEvaluando = document.createElement("button");
+    btnEvaluando.className = "evaluacion-btn estado-dd";
+    btnEvaluando.innerText = "Evaluando";
+
+    const btnDesestimado = document.createElement("button");
+    btnDesestimado.className = "evaluacion-btn estado-rech";
+    btnDesestimado.innerText = "Desestimado";
+
+    if (localStorage.getItem("evaluadorAceptado") === "true") {
+        if (btnNuevo) btnNuevo.replaceWith(btnEvaluando);
+    } else if (localStorage.getItem("evaluadorAceptado") === "false") {
+        if (btnNuevo) btnNuevo.replaceWith(btnDesestimado);
+    }
 }
