@@ -73,6 +73,14 @@ html {
   color: white;
 }
 
+.estado-exit {
+  background-color: #f9476b;
+  color: white;
+}
+.estado-btn[data-estado="Exit"] {
+  background-color: #f9476b;
+  color: white;
+}
 /* 🔹 Responsividad */
 @media (max-width: 768px) {
   .project-table {

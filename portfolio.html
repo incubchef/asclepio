@@ -70,6 +70,7 @@
   <div class="estado-filtros">
     <button class="estado-btn" data-estado="Evaluando">Evaluando</button>
     <button class="estado-btn" data-estado="Invertida">Invertida</button>
+    <button class="estado-btn" data-estado="Exit">Exit</button>
   </div>
 
   <!-- Fecha con dos inputs -->
@@ -82,7 +83,7 @@
 
   <div class="portfolio-container">
     <section class="project-list">
-      <h2>Portfolio ASCLEPIO</h2>
+      <h2>Portfolio general ASCLEPIO</h2>
 
       <!-- Tabla de proyectos -->
       <table class="project-table">
@@ -104,15 +105,15 @@
             <td><span class="estado estado-invertida">Invertida</span></td>
           </tr>
           <tr>
-            <td onclick="window.location.href='companyNoInvest.html';" style="cursor: pointer;"><img src="public/logo_globhealth.png" alt="GlobHealth" class="project-icon"> <strong>GlobHealth</strong>
+            <td style="cursor: pointer;"><img src="public/logo_globhealth.png" alt="GlobHealth" class="project-icon"> <strong>GlobHealth</strong>
             </td>
             <td>Investigación en salud</td>
             <td>Medicina - General</td>
             <td>15/03/2024</td>
-            <td><span class="estado estado-invertida">Invertida</span></td>
+            <td><span class="estado estado-exit">Exit</span></td>
           </tr>
           <tr>
-            <td onclick="window.location.href='companyInvest1.html';" style="cursor: pointer;"><img src="public/logo_onco.png" alt="Onco Solutions" class="project-icon"> <strong>Onco
+            <td onclick="window.location.href='companyInvest2.html';" style="cursor: pointer;"><img src="public/logo_onco.png" alt="Onco Solutions" class="project-icon"> <strong>Onco
                 Solutions</strong></td>
             <td>Desarrollo Biotecnológico</td>
             <td>Biotecnología - Investigación</td>
@@ -132,7 +133,23 @@
                           alt="CarePlus Inno" class="project-icon"> <strong>VITA</strong></td>
                       <td>Salud y Bienestar</td>
                       <td>Salud Mental - Tecnología</td>
-                      <td>20/04/2024</td>
+                      <td>20/11/2024</td>
+                      <td><span class="estado estado-evaluando">Evaluando</span></td>
+                    </tr>
+                    <tr>
+                      <td style="cursor: pointer;"><img src="public/logo_neuro.jpg"
+                          alt="NeuroTech Labs" class="project-icon"> <strong>NeuroTech Labs</strong></td>
+                      <td>Investigación y desarrollo de terapias neuroprotectoras</td>
+                      <td>Biotecnología - Neurociencia</td>
+                      <td>20/01/2025</td>
+                      <td><span class="estado estado-invertida">Invertida</span></td>
+                    </tr>
+                    <tr>
+                      <td  style="cursor: pointer;"><img
+                          src="public/logo_medisync.jpg" alt="MediSync AI" class="project-icon"> <strong>MediSync AI</strong></td>
+                      <td>Plataforma de salud digital con IA</td>
+                      <td>Medicina - Tecnología</td>
+                      <td>01/04/2025</td>
                       <td><span class="estado estado-evaluando">Evaluando</span></td>
                     </tr>
         </tbody>
