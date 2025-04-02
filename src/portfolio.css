@@ -231,6 +231,14 @@ html {
     background-color: #A8E6A2;
       color: #2E7D32;
 }
+.estado-btn[data-estado="Desestimado"]{
+  background-color: #2b2b2b;
+  color: white;
+}
+.estado-desestimado {
+  background-color: #2b2b2b;
+  color: white;
+}
 
 /* 🔹 Filtros de fecha */
 .fecha-filtros {
