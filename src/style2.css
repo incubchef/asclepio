@@ -74,6 +74,13 @@ header {
   border-radius: 5px;
   font-weight: bold;
 }
+.progress-status {
+  background: #f4af02;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
 /* 🔹 Progreso de inversión */
 .progress {
