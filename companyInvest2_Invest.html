@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company - ASCLEPIO</title>
+  <link rel="stylesheet" href="src/companynew.css">
+  <link rel="stylesheet" href="src/navbar.css">
+  <link rel="stylesheet" href="src/style2.css">
+</head>
+
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="dashboard.html">
+        <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+      </a>
+    </div>
+
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="active">INICIO</a></li>
+        <li><a href="noticias.html">NOTICIAS</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="inversiones.html">INVERSIONES</a></li>
+        <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+      </ul>
+      <div class="account" id="account">
+        <div class="account-btn" id="account-btn">RS</div>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 Pestañas -->
+  <div class="tabs-container">
+    <button class="tab-button" onclick="window.location.href='companyInvest2.html'">Compañía</button>
+    <button class="tab-button active">Detalles Inversión</button>
+  </div>
+
+  <!-- 🔹 Sección de Inversión -->
+  <div class="inversion-container">
+    <header>
+      <h1 class="logo">Onco<span class="highlight">Solutions</span></h1>
+      <div class="company-logo">
+        <img src="public/logo_onco.png" alt="Logo Empresa">
+      </div>
+      <span class="active-status">FINALIZADO</span>
+    </header>
+
+    <section class="video-section">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Onco Video"
+        frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section class="investment-details">
+
+
+      <div class="progress">
+        <p>Inversión conseguida: <strong>1.000.000€</strong></p>
+        <p>Objetivo: <strong>1.500.000€</strong></p>
+        <p>Invertido: <strong>5.000€</strong></p>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 67%;"></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="share-btn">Invertida</button>
+      </div>
+      <!-- 🔹 Documentos Adjuntos -->
+      <div class="documents-section">
+        <h3>Documentos Adjuntos</h3>
+        <div class="document-list">
+          <a href="docs/business_report.pdf" download>
+            <img src="public/pdf.png" alt="PDF">
+            <p>Poderes notariales</p>
+          </a>
+          <a href="docs/tech_specs.pdf" download>
+            <img src="public/pdf.png" alt="PDF">
+            <p>Contrato de inversión</p>
+          </a>
+          <a href="docs/patents.pdf" download>
+            <img src="public/pdf.png" alt="PDF">
+            <p>Acuerdo de confidencialidad (NDA)</p>
+          </a>
+          <a href="docs/patents.pdf" download>
+            <img src="public/pdf.png" alt="PDF">
+            <p>Contrato de suscripción de acciones</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-info">
+      <p>
+        SightDiab es una empresa española de biotecnología enfocada en la prevención de la ceguera en personas con
+        diabetes,
+        específicamente en la retinopatía diabética. Su innovador colirio combina compuestos bioactivos con propiedades
+        neuroprotectoras y antiinflamatorias para frenar la progresión del daño retinal antes de que sea irreversible.
+      </p>
+    </section>
+
+    <section class="investment-summary">
+      <div class="summary-item"><strong>Madurez:</strong> Prototipo/preclínica</div>
+      <div class="summary-item"><strong>Valoración:</strong> 8.450.000€</div>
+      <div class="summary-item"><strong>Salida estimada:</strong> 2030</div>
+      <div class="summary-item"><strong>Sector:</strong> Biotecnología</div>
+      <div class="summary-item"><strong>Equity ofrecido:</strong> 12.0%</div>
+      <div class="summary-item"><strong>Inversión mínima:</strong> 2.500€</div>
+    </section>
+
+    <footer class="tax-info">
+      <p>Deducción del 30% en el impuesto sobre la renta para inversores en startups biotecnológicas en España.</p>
+      <!-- 🔹 Documentos Adjuntos -->
+      <div class="documents-section">
+        <h3>Documentos Adjuntos</h3>
+        <div class="document-list">
+          <a href="docs/business_report.pdf" download>
+            <img src="public/pdf.png" alt="PDF">
+            <p>Certificado Startup</p>
+          </a>
+          <a href="docs/tech_specs.pdf" download>
+            <img src="public/pdf.png" alt="PDF">
+            <p>Justificantes de inversión para desgravación fiscal</p>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="src/burger.js"></script>
+</body>
+
+</html>

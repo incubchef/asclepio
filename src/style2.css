@@ -1,0 +1,221 @@
+/* 🔹 General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔹 Contenedor principal */
+.inversion-container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Encabezado */
+header {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.highlight {
+  color: #2093aa;
+}
+
+.slogan {
+  color: #2093aa;
+  font-weight: bold;
+}
+
+/* 🔹 Video */
+.video-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.video-section iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+/* 🔹 Estado de inversión */
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.investors {
+  color: #2093aa;
+  font-weight: bold;
+}
+
+.active-status {
+  background: #33dd88;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* 🔹 Progreso de inversión */
+.progress {
+  text-align: center;
+  margin: 20px 0;
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.progress p {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2093aa;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+  border-radius: 6px;
+}
+
+/* 🔹 Botones */
+.actions {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.share-btn,
+.invest-btn {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.share-btn {
+  background: #e0e0e0;
+  color: black;
+}
+
+.invest-btn {
+  background: #5533ff;
+  color: white;
+}
+
+/* 🔹 Descripción de la empresa */
+.company-info {
+  padding: 20px;
+  background: #eef;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* 🔹 Resumen de inversión */
+.investment-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item {
+  width: 48%;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1em;
+}
+
+/* 🔹 Información fiscal */
+.tax-info {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 20px;
+  padding: 10px;
+  background: #e0ffe0;
+  border-radius: 8px;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .investment-summary {
+    flex-direction: column;
+  }
+
+  .summary-item {
+    width: 100%;
+  }
+
+  .status {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.estado-invertida {
+
+  background-color: #A8E6A2;
+  color: #2E7D32;
+}
+
+
+.company-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  /* Ajusta el espaciado si es necesario */
+}
+
+.company-logo img {
+  max-width: 150px;
+  /* Ajusta el tamaño del logo si es necesario */
+  height: auto;
+}
+
+
+
+.investors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

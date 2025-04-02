@@ -1,0 +1,142 @@
+/* 🔹 Reset de estilos */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* 🔹 Contenedor principal */
+.investment-details-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Estilos de pestañas */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Botón de pestaña */
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background: #4f95e0;
+  /* Color gris para pestañas inactivas */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+/* 🔹 Pestaña activa (Ejemplo: Detalles de Inversión) */
+.tab-button.active {
+  background: #004085;
+  /* Azul más oscuro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Hover en pestañas */
+.tab-button:hover {
+  background: #0056b3;
+}
+
+/* 🔹 Deshabilitar pestaña (Ejemplo: Evaluación en gris) */
+.tab-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* 🔹 Secciones de contenido de las pestañas */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* 🔹 Mostrar contenido activo */
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* 🔹 Sección de documentos */
+.documents-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* 🔹 Botones de navegación */
+.navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* 🔹 Botón Evaluación Deshabilitado */
+.btn-disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* 🔹 Botón de Aceptar Evaluación */
+.btn-submit {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #218838;
+}
+
+/* 🔹 Icono de candado */
+#candado-eval {
+  margin-left: 5px;
+}
+
+/* 🔹 Estilos específicos para la pestaña "Compañía" */
+.company-tab {
+  background-color: #007bff !important;
+}
+
+.company-tab.active {
+  background-color: #004085 !important;
+}
+
+/* 🔹 Cambiar "Review" por "Evaluación" */
+.tab-button.review {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.tab-button.review::after {
+  content: " (Evaluación)";
+  font-weight: bold;
+  color: white;
+}

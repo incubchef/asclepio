@@ -246,7 +246,14 @@ button:hover {
   display: inline-block;
 }
 
-
+.estado-inv {
+  background-color: #A8E6A2;
+    color: #2E7D32;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
 
 .document-list {
   display: flex;

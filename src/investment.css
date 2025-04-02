@@ -1,0 +1,201 @@
+/* Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* 🔹 Contenedor principal de inversión */
+.investment-container {
+  width: 100%;
+  max-width: none;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Información de la inversión */
+.investment-info {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.investment-info p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* 📊 Cap Table (Gráfico) */
+.chart-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.chart-container canvas {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* 📰 Últimas Noticias */
+.news-section {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.news-section ul li {
+  background: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 📄 Documentación */
+.documents-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.documents-section h2 {
+  color: #0056b3;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* 🔹 Lista de documentos con icono PDF */
+.document-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.document-list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.document-list img {
+  width: 50px;
+  height: 50px;
+}
+
+.document-list p {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* 🔹 Botones de Evaluación */
+.evaluation-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.evaluation-section button {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.evaluation-section button:hover {
+  background-color: #218838;
+}
+
+/* 🔹 Botones */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.btn-accept {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-accept:hover {
+  background-color: #218838;
+}
+
+.btn-deny {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-deny:hover {
+  background-color: #c82333;
+}
+
+/* 🔹 Diseño de pestañas */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.tab-button:hover {
+  background: #0056b3;
+}
+
+.tab-button.active {
+  background: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* 🔹 Mostrar sección activa */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}

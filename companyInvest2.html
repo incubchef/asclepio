@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company - ASCLEPIO</title>
+  <link rel="stylesheet" href="src/companynew.css">
+  <link rel="stylesheet" href="src/navbar.css">
+</head>
+
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="dashboard.html">
+        <img src="public/asclepio_logo.png" alt="Asclepio Logo">
+      </a>
+    </div>
+
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="active">INICIO</a></li>
+        <li><a href="noticias.html">NOTICIAS</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="inversiones.html">INVERSIONES</a></li>
+        <li><a href="evaluaciones.html">EVALUACIONES</a></li>
+      </ul>
+      <div class="account" id="account">
+        <div class="account-btn" id="account-btn">RS</div>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 Pestañas -->
+  <div class="tabs-container">
+    <button class="tab-button active">Compañía</button>
+    <button class="tab-button" onclick="window.location.href='companyInvest2_Invest.html'">Detalles Inversión</button>
+  </div>
+
+  <!-- 🔹 Sección Compañía -->
+  <div class="company-container">
+    <div class="company-logo">
+      <img src="public/logo_onco.png" alt="Logo Empresa">
+    </div>
+    <div class="company-info">
+      <h2>Onco Solutions</h2>
+      <p><strong>Proyecto:</strong>NeoThera</p>
+      <p><strong>Dirección:</strong> 1123 Biotech Avenue, Madrid, España</p>
+      <p><strong>Especialidad:</strong> Oncología</p>
+      <p><strong>Estado Análisis:</strong> <span class="estado-inv">Invertida</span></p>
+    </div>
+  </div>
+
+  <!-- 🔹 Descripción del Proyecto -->
+  <div class="company-description">
+    <h3>Descripción del Proyecto</h3>
+    <p>
+Onco Solutions es una empresa innovadora en el campo de la oncología, dedicada al desarrollo de terapias avanzadas para
+mejorar el tratamiento del cáncer. Su proyecto insignia es NeoThera, una terapia de última generación basada en
+nanopartículas dirigidas que permiten administrar fármacos anticancerígenos de manera más precisa y eficaz, minimizando
+los efectos secundarios.
+
+NeoThera combina nanotecnología y biología molecular para atacar específicamente las células tumorales sin dañar el
+tejido sano. Esta tecnología busca mejorar la respuesta al tratamiento, reducir la resistencia a los fármacos y ofrecer
+una alternativa más segura y personalizada para los pacientes con cáncer en estadios avanzados.
+    </p>
+    <h3>TRL 4: Validación en laboratorio y pruebas preclínicas</h3>
+    <p>
+      El proyecto NeoThera se encuentra en la fase TRL 4, lo que indica que ya ha sido validado en laboratorio y está en
+      pruebas preclínicas. Se han realizado estudios en modelos celulares y animales que han demostrado la capacidad de las
+      nanopartículas para mejorar la absorción del fármaco en tumores sólidos, aumentando su efectividad y reduciendo los
+      efectos adversos.
+      
+      Los resultados obtenidos hasta ahora son prometedores, pero aún se requieren estudios clínicos en humanos para avanzar
+      hacia su comercialización. El siguiente paso es la validación en ensayos clínicos de fase I (TRL 5), donde se evaluará
+      su seguridad y eficacia en pacientes oncológicos.
+    </p>
+  </div>
+
+  <!-- 🔹 Documentos Adjuntos -->
+  <div class="documents-section">
+    <h3>Documentos Adjuntos</h3>
+    <div class="document-list">
+      <a href="docs/business_report.pdf" download>
+        <img src="public/pdf.png" alt="PDF">
+        <p>Pitch Deck</p>
+      </a>
+      <a href="docs/tech_specs.pdf" download>
+        <img src="public/pdf.png" alt="PDF">
+        <p>Deep DD</p>
+      </a>
+      <a href="docs/patents.pdf" download>
+        <img src="public/pdf.png" alt="PDF">
+        <p>Patentes</p>
+      </a>
+    </div>
+  </div>
+
+  <script src="src/burger.js"></script>
+</body>
+
+</html>
