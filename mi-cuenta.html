@@ -54,9 +54,15 @@
     <div class="personal-details">
       <h2>Rafael Simó Canonge</h2>
       <p><strong>Alias:</strong> 1234567890</p>
-      <p><strong>Email Personal:</strong> rafael.simo.canonge@gmail.com</p>
-      <p><strong>Email Profesional:</strong> rsimo@comb.es</p>
+      <p><strong>Email Profesional:</strong> rsimo@comb.es</p>    
+      <div class="form-group full-width">
+        <label for="email-personal">Email Personal</label>
+        <input type="email" id="email-personal" value="rafael.simo.canonge@gmail.com" required>
+      </div>
+
     </div>
+
+
   </section>
 
   <!-- 🔹 SECCIÓN: DATOS PROFESIONALES -->
@@ -79,12 +85,17 @@
           required>El Dr. Simó Canonge es jefe del Servicio de Endocrinología y Nutrición en el Hospital Universitario Vall d'Hebron y profesor titular de Medicina y Endocrinología en la Universitat Autònoma de Barcelona (UAB). Coordina el grupo de investigación en Diabetes y Metabolismo en el Vall d'Hebron Institut de Recerca (VHIR), reconocido internacionalmente por sus avances en la retinopatía diabética. En 2022, fue galardonado con el Premio Alberto Sols por la Sociedad Española de Diabetes, en reconocimiento a su destacada trayectoria en la investigación de la diabetes. Además, en 2023, ingresó como Académico Correspondiente en la Reial Acadèmia de Medicina de Catalunya, presentando el trabajo titulado "Screening for diabetic retinopathy: new perspectives and challenges"</textarea>
       </div>
 
-      <div class="form-group wide-field">
-        <label for="links">Links de Interés</label>
-        <input type="url" id="links" value="https://orcid.org/0000-0003-0475-3096" required>
-        <input type="url" id="links2" value="https://ramc.cat/wp-content/uploads/2024/04/revista-RAMC-38.3.4.pdf"
-          required>
-      </div>
+  <div class="form-group wide-field">
+    <label for="links">Links de Interés</label>
+    <div id="links-container">
+      <input type="url" class="link-input" value="https://orcid.org/0000-0003-0475-3096" required>
+      <input type="url" class="link-input" value="https://ramc.cat/wp-content/uploads/2024/04/revista-RAMC-38.3.4.pdf"
+        required>
+    </div>
+    <button type="button" id="add-link-btn">Añadir</button>
+  </div>
+
+
 
             <!-- Botón centrado -->
             <div class="button-container">
@@ -106,7 +117,23 @@
 </div>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const addLinkBtn = document.getElementById("add-link-btn");
+      const linksContainer = document.getElementById("links-container");
 
+      addLinkBtn.addEventListener("click", () => {
+        const newInput = document.createElement("input");
+        newInput.type = "url";
+        newInput.className = "link-input";
+        newInput.placeholder = "Nuevo link...";
+        newInput.required = true;
+
+        linksContainer.appendChild(newInput);
+      });
+    });
+
+</script>
   <script src="src/burger.js"></script>
 </body>
 

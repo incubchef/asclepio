@@ -200,3 +200,86 @@ button:hover {
     grid-column: span 1;
   }
 }
+
+/* 📩 Estilo del campo Email Personal */
+.personal-details .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  /* Ajusta la separación respecto a otros elementos */
+  width: 100%;
+}
+
+.personal-details input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #f9f9f9;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.personal-details input:focus {
+  border-color: #28a745;
+  outline: none;
+  box-shadow: 0 0 6px rgba(40, 167, 69, 0.3);
+}
+/* 📩 Asegurar que los emails estén en bloque, no en línea */
+.personal-details .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  /* Espacio entre los campos */
+  width: 100%;
+}
+
+/* 🔹 Asegurar que cada campo de email ocupa todo el ancho */
+.full-width {
+  width: 100%;
+}
+
+/* 🔹 Encabezado de Links de Interés */
+.links-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🔹 Asegurar que el botón solo ocupa el ancho del texto */
+#add-link-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.2s;
+
+  /* 🔹 Corregir el ancho */
+  width: fit-content;
+  /* Se ajusta al contenido */
+  min-width: auto;
+
+  /* 🔹 Alineación */
+  display: inline-block;
+  /* Evita que ocupe todo el ancho */
+  margin-top: 8px;
+  /* Espacio con los inputs */
+}
+
+#add-link-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 🔹 Contenedor de links para mantener alineación */
+#links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 5px;
+  /* Ajuste de espaciado antes del botón */
+}

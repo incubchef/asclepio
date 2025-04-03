@@ -1,10 +1,24 @@
-/* Reset */
+/* Reset básico */
 body,
 html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100vh - 70px);
+  max-width: 100%;
 }
 
 /* Contenedor principal */
