@@ -9,7 +9,49 @@
   <link rel="stylesheet" href="src/portfolio.css">
   <link rel="stylesheet" href="src/navbar.css">
   <script defer src="src/micuenta.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const table = document.querySelector(".project-table");
+    const headers = table.querySelectorAll("th");
+    const tbody = table.querySelector("tbody");
 
+    headers.forEach((header, index) => {
+      const sortIcon = header.querySelector(".sort-icon");
+
+      header.addEventListener("click", () => {
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+        const isAscending = header.classList.contains("asc");
+
+        // Remueve clases de orden y restablece íconos
+        headers.forEach(h => h.classList.remove("asc", "desc"));
+        headers.forEach(h => h.querySelector(".sort-icon").textContent = "⇅");
+
+        header.classList.toggle(isAscending ? "desc" : "asc");
+        sortIcon.textContent = isAscending ? "↓" : "↑"; // Cambia la flecha
+
+        const type = header.dataset.type || "string";
+        rows.sort((rowA, rowB) => {
+          let cellA = rowA.cells[index].textContent.trim();
+          let cellB = rowB.cells[index].textContent.trim();
+
+          if (type === "date") {
+            cellA = new Date(cellA.split("/").reverse().join("-"));
+            cellB = new Date(cellB.split("/").reverse().join("-"));
+          } else if (type === "number") {
+            cellA = parseFloat(cellA) || 0;
+            cellB = parseFloat(cellB) || 0;
+          }
+
+          return isAscending ? (cellA > cellB ? 1 : -1) : (cellA < cellB ? 1 : -1);
+        });
+
+        tbody.innerHTML = "";
+        tbody.append(...rows);
+      });
+    });
+  });
+
+</script>
 </head>
 
 <body>
@@ -31,7 +73,7 @@
     <ul class="nav-links">
       <li><a href="dashboard.html">INICIO</a></li>
       <li><a href="noticias.html">NOTICIAS</a></li>
-      <li><a href="portfolio.html"  class="active">PORTFOLIO</a></li>
+      <li><a href="portfolio.html"  class="active">OPORTUNIDADES</a></li>
       <li><a href="inversiones.html">INVERSIONES</a></li>
       <li><a href="evaluaciones.html">EVALUACIONES</a></li>
     </ul>
@@ -92,11 +134,11 @@
       <table class="project-table">
         <thead>
           <tr>
-            <th>Compañía</th>
-            <th>Proyecto</th>
-            <th>Categoría</th>
-            <th>Fecha</th>
-            <th>Estado</th>
+            <th data-type="string">Compañía <span class="sort-icon"> ⇅</span></th>
+            <th data-type="string">Proyecto <span class="sort-icon"> ⇅</span></th>
+            <th data-type="string">Categoría<span class="sort-icon"> ⇅</span></th>
+            <th data-type="date">Fecha<span class="sort-icon"> ⇅</span></th>
+            <th data-type="string">Estado<span class="sort-icon"> ⇅</span></th>
           </tr>
         </thead>
         <tbody>

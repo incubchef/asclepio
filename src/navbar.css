@@ -185,3 +185,44 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  /* Asegura alineación vertical */
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  position: relative;
+  /* Necesario para la bolita */
+  display: flex;
+  align-items: center;
+  /* Asegura que el texto esté centrado */
+  padding: 10px 15px;
+  /* Ajusta el espaciado sin mover la bolita */
+  text-decoration: none;
+  color: black;
+  
+}
+
+.notification-badge {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  /* Ajusta según sea necesario */
+  right: -10px;
+  /* Ajusta según sea necesario */
+  transform: translateY(-50%);
+  /* Mantiene buena posición */
+}

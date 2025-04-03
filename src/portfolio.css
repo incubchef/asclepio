@@ -277,3 +277,30 @@ td[onclick]:hover strong {
   color: #00CBC1;
   /* Cambia el color del texto */
 }
+
+th {
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+  /* Espacio para la flecha */
+  text-align: left;
+}
+
+.sort-icon {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #888;
+  transition: transform 0.2s ease-in-out;
+}
+
+th.asc .sort-icon {
+  transform: rotate(180deg);
+  /* Flecha hacia arriba */
+  color: white;
+}
+
+th.desc .sort-icon {
+  transform: rotate(0deg);
+  /* Flecha hacia abajo */
+  color: white;
+}
