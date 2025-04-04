@@ -50,6 +50,29 @@
     <button class="tab-button" id="evalTab" disabled onclick="window.location.href='CompanyNew_eval.html'">Evaluación <span id="candado-eval">🔒</span></button>
     <button class="tab-button" id="reviewTab" disabled>Review <span id="candado-review">🔒</span></button>
   </div>
+<!-- 🔹 Sección Evaluador -->
+<div id="evaluadorSection" class="evaluador-section hidden">
+  <h2>¿Quieres ser Evaluador del Proyecto?</h2>
+  <button class="btn-accept" onclick="aceptarEvaluador()">Confirmar</button>
+  <button class="btn-deny" onclick="denegarEvaluador()">Rechazar</button>
+
+  <!-- 🔹 Selector de Motivo de Rechazo -->
+  <div id="motivoRechazoContainer" class="hidden">
+    <label for="motivoRechazo">Motivo del rechazo:</label>
+    <select id="motivoRechazo">
+      <option value="">Selecciona un motivo...</option>
+      <option value="Incompatibilidades / Conflicto de interés">Incompatibilidades / Conflicto de interés</option>
+      <option value="Por carga de trabajo">Por carga de trabajo</option>
+      <option value="No entra dentro de su campo de especialización">No entra dentro de su campo de especialización
+      </option>
+    </select>
+    <button class="btn-save" onclick="guardarMotivoRechazo()">Guardar Motivo</button>
+  </div>
+  
+  <!-- 🔹 Mensaje de Rechazo -->
+  <div id="mensajeRechazo" class="hidden"></div>
+  </div>
+</div>
 
   <!-- 🔹 Sección Compañía -->
   <div class="company-container">
@@ -101,14 +124,7 @@ calidad de vida de las personas.
     </div>
   </div>
 
-  <!-- 🔹 Modal de Evaluador -->
-  <div id="evaluadorModal" class="modal">
-    <div class="modal-content">
-      <h2>¿Quieres ser Evaluador del Proyecto?</h2>
-      <button class="btn-accept" onclick="aceptarEvaluador()">Confirmar</button>
-      <button class="btn-deny" onclick="denegarEvaluador()">Rechazar</button>
-    </div>
-  </div>
+
 <script defer src="src/micuenta.js"></script>
   <script src="src/burger.js"></script>
 </body>

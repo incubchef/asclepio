@@ -60,13 +60,24 @@
 
   <label for="especialidad">Especialidad</label>
   <input type="text" id="especialidad" value="Endocrinología y Nutrición" required>
+<label for="area-interes">Áreas de Interés</label>
+<div class="tag-container">
+  <input type="text" id="area-interes" placeholder="Escribe y selecciona una área...">
+  <ul id="suggestions-list" class="suggestions-list"></ul>
+</div>
+<div id="tags-list" class="tags-list"></div>
 
   <label for="centro">Centro de Trabajo Principal</label>
   <input type="text" id="centro" value="Hospital Universitario Vall d'Hebron" required>
 
-  <label for="historia">Historia</label>
-  <textarea id="historia"
-    required>El Dr. Simó Canonge es jefe del Servicio de Endocrinología y Nutrición en el Hospital Universitario Vall d'Hebron y profesor titular de Medicina y Endocrinología en la Universitat Autònoma de Barcelona (UAB). Coordina el grupo de investigación en Diabetes y Metabolismo en el Vall d'Hebron Institut de Recerca (VHIR), reconocido internacionalmente por sus avances en la retinopatía diabética. En 2022, fue galardonado con el Premio Alberto Sols por la Sociedad Española de Diabetes, en reconocimiento a su destacada trayectoria en la investigación de la diabetes. Además, en 2023, ingresó como Académico Correspondiente en la Reial Acadèmia de Medicina de Catalunya, presentando el trabajo titulado "Screening for diabetic retinopathy: new perspectives and challenges".</textarea>
+<label for="cv">Currículum Vitae (PDF)</label>
+<div id="drop-area" class="drop-zone">
+  <p>Arrastra y suelta tu archivo aquí o</p>
+  <input type="file" id="cv" accept=".pdf" hidden>
+  <button type="button" id="upload-button">Añadir fichero</button>
+  <p id="file-name" class="file-name"></p>
+</div>
+
 
   <label for="links">Links de Interés</label>
   <input type="url" id="links" value="https://orcid.org/0000-0003-0475-3096" required>
@@ -88,4 +99,129 @@
     });
   </script>
 
+<script>const dropArea = document.getElementById("drop-area");
+  const fileInput = document.getElementById("cv");
+  const uploadButton = document.getElementById("upload-button");
+  const fileNameDisplay = document.getElementById("file-name");
+  const submitButton = document.getElementById("submit-button");
+
+  // Al hacer clic en el botón, abrir el selector de archivos
+  uploadButton.addEventListener("click", () => fileInput.click());
+
+  // Cuando se seleccione un archivo manualmente
+  fileInput.addEventListener("change", function () {
+    handleFile(this.files[0]);
+  });
+
+  // Arrastrar y soltar archivos en el área
+  dropArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropArea.style.background = "rgba(0, 203, 193, 0.2)";
+  });
+
+  dropArea.addEventListener("dragleave", () => {
+    dropArea.style.background = "transparent";
+  });
+
+  dropArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropArea.style.background = "transparent";
+
+    let file = e.dataTransfer.files[0];
+    fileInput.files = e.dataTransfer.files;
+    handleFile(file);
+  });
+
+  // Manejar el archivo seleccionado
+  function handleFile(file) {
+    if (file && file.type === "application/pdf") {
+      fileNameDisplay.textContent = `Archivo seleccionado: ${file.name}`;
+      submitButton.disabled = false;
+    } else {
+      fileNameDisplay.textContent = "⚠️ Solo se permiten archivos PDF.";
+      fileInput.value = ""; // Reset input
+      submitButton.disabled = true;
+    }
+  }
+</script>
+
+<script>const areaInput = document.getElementById("area-interes");
+  const suggestionsList = document.getElementById("suggestions-list");
+  const tagsList = document.getElementById("tags-list");
+
+  // Listado de opciones disponibles
+  const areasDisponibles = [
+    "Diabetes",
+    "Endocrinología Pediátrica",
+    "Nutrición Clínica",
+    "Metabolismo",
+    "Obesidad",
+    "Neuroendocrinología",
+    "Tiroides",
+    "Hipófisis",
+    "Lípidos",
+    "Genética Endocrina",
+  ];
+
+  // Array para guardar las áreas seleccionadas
+  let selectedTags = [];
+
+  // Mostrar sugerencias filtradas
+  areaInput.addEventListener("input", function () {
+    const searchTerm = this.value.toLowerCase();
+    suggestionsList.innerHTML = ""; // Limpiar lista
+
+    if (searchTerm) {
+      const filteredAreas = areasDisponibles.filter(
+        (area) => area.toLowerCase().includes(searchTerm) && !selectedTags.includes(area)
+      );
+
+      if (filteredAreas.length) {
+        suggestionsList.style.display = "block";
+        filteredAreas.forEach((area) => {
+          const li = document.createElement("li");
+          li.textContent = area;
+          li.addEventListener("click", () => addTag(area));
+          suggestionsList.appendChild(li);
+        });
+      } else {
+        suggestionsList.style.display = "none";
+      }
+    } else {
+      suggestionsList.style.display = "none";
+    }
+  });
+
+  // Agregar un tag al hacer clic en una sugerencia
+  function addTag(area) {
+    if (!selectedTags.includes(area)) {
+      selectedTags.push(area);
+
+      const tag = document.createElement("div");
+      tag.classList.add("tag");
+      tag.innerHTML = `${area} <span class="remove-tag">✖</span>`;
+
+      tag.querySelector(".remove-tag").addEventListener("click", () => removeTag(area, tag));
+      tagsList.appendChild(tag);
+    }
+
+    // Limpiar input y sugerencias
+    areaInput.value = "";
+    suggestionsList.innerHTML = "";
+    suggestionsList.style.display = "none";
+  }
+
+  // Eliminar un tag
+  function removeTag(area, tagElement) {
+    selectedTags = selectedTags.filter((item) => item !== area);
+    tagsList.removeChild(tagElement);
+  }
+
+  // Ocultar sugerencias si se hace clic fuera
+  document.addEventListener("click", (e) => {
+    if (!areaInput.contains(e.target) && !suggestionsList.contains(e.target)) {
+      suggestionsList.style.display = "none";
+    }
+  });
+</script>
 </html>

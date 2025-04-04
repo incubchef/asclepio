@@ -213,3 +213,110 @@ button:hover {
     font-size: 18px;
   }
 }
+
+/* Estilos para el área de carga de CV */
+.drop-zone {
+  border: 2px dashed #00CBC1;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.drop-zone p {
+  margin: 0;
+  color: #003B64;
+  font-size: 14px;
+}
+
+.drop-zone:hover {
+  background: rgba(0, 203, 193, 0.1);
+}
+
+#upload-button {
+  background: #003B64;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+#upload-button:hover {
+  background: #002244;
+}
+
+.file-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #003B64;
+  font-weight: bold;
+}
+
+/* Contenedor de búsqueda y lista */
+.tag-container {
+  position: relative;
+  width: 100%;
+}
+
+#area-interes {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Lista desplegable de sugerencias */
+.suggestions-list {
+  position: absolute;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.suggestions-list li:hover {
+  background: #00CBC1;
+  color: white;
+}
+
+/* Lista de tags */
+.tags-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background: #00CBC1;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.tag .remove-tag {
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
