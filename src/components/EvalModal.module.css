@@ -1,0 +1,155 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  padding: 16px;
+}
+
+.box {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-xl);
+  padding: 28px;
+  width: 500px;
+  max-width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--text1);
+  font-weight: 400;
+}
+
+.sub {
+  font-size: 13px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+.warning {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.22);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: var(--gold2);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  color: var(--text2);
+  margin-bottom: 6px;
+}
+
+.select,
+.textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text1);
+  padding: 9px 12px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.select:focus,
+.textarea:focus {
+  border-color: var(--border2);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.range {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.scores {
+  display: flex;
+  gap: 10px;
+  margin: 6px 0 18px;
+}
+
+.scoreBox {
+  flex: 1;
+  background: var(--surface);
+  border-radius: var(--r-md);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.scoreNum {
+  font-family: var(--serif);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.scoreLabel {
+  font-size: 10px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.checkRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+
+.checkRow input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.checkLabel {
+  font-size: 12.5px;
+  color: var(--text2);
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}

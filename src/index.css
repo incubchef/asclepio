@@ -1,108 +1,236 @@
-/* Estilos base */
-body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to right, #fff, #00CBC1, #006AB4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* ── Google Fonts loaded in index.html ── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
-/* Contenedor del modal */
-.modal {
-  display: flex;
-  width: 600px;
-  height: 420px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+:root {
+  /* Backgrounds */
+  --bg: #0a0e1a;
+  --bg2: #0f1526;
+  --bg3: #141b2e;
+  --surface: #1a2340;
+  --surface2: #1f2a48;
+
+  /* Borders */
+  --border: rgba(99, 179, 255, 0.10);
+  --border2: rgba(99, 179, 255, 0.22);
+
+  /* Brand */
+  --accent: #3b82f6;
+  --accent2: #60a5fa;
+  --teal: #14b8a6;
+  --teal2: #2dd4bf;
+  --gold: #f59e0b;
+  --gold2: #fbbf24;
+  --red: #ef4444;
+  --green: #22c55e;
+
+  /* Text */
+  --text1: #f0f4ff;
+  --text2: #94a3b8;
+  --text3: #64748b;
+
+  /* Typography */
+  --font: 'DM Sans', system-ui, sans-serif;
+  --serif: 'DM Serif Display', Georgia, serif;
+
+  /* Radius */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 18px;
 }
 
-/* Lado izquierdo del modal (logo) */
-.modal-left {
-  background: #003B64;
-  width: 40%;
+html,
+body,
+#root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text1);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface2);
+  border-radius: 2px;
+}
+
+/* ── Base resets ── */
+button {
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font);
+}
+
+/* ── Utility classes ── */
+.serif {
+  font-family: var(--serif);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.tag-sector {
+  background: rgba(59, 130, 246, 0.10);
+  color: var(--accent2);
+}
+
+.tag-trl {
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--teal2);
+}
+
+.tag-paid {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--gold2);
+}
+
+.tag-new {
+  background: rgba(34, 197, 94, 0.10);
+  color: var(--green);
+}
+
+.tag-hot {
+  background: rgba(239, 68, 68, 0.10);
+  color: #f87171;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  transition: background 0.15s, opacity 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-teal {
+  background: var(--teal);
+  color: #fff;
+}
+
+.btn-teal:hover {
+  background: #0d9488;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent2);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text2);
+  padding: 6px 10px;
+}
+
+.btn-ghost:hover {
+  color: var(--text1);
+}
+
+.btn-sm {
+  padding: 5px 11px;
+  font-size: 12px;
+}
+
+/* ── Score bars ── */
+.score-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  gap: 8px;
 }
 
-.logo {
-  max-width: 180px;
+.bar-bg {
+  width: 72px;
+  height: 5px;
+  background: var(--surface2);
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-/* Lado derecho del modal */
-.modal-right {
-  width: 60%;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+.bar-fill {
+  height: 100%;
+  border-radius: 3px;
 }
 
-.modal-right h2 {
-  color: #003B64;
-  margin-bottom: 20px;
+/* ── Notification toast ── */
+.notif-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--bg2);
+  border: 1px solid var(--teal);
+  border-radius: var(--r-md);
+  padding: 12px 18px;
+  font-size: 13px;
+  color: var(--teal2);
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s, transform 0.25s;
+  pointer-events: none;
 }
 
-/* Inputs */
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-/* Botón */
-button {
-  width: 100%;
-  background-color: #00CBC1;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #009B94;
-}
-
-/* Enlace de contraseña olvidada */
-.forgot-password {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #003B64;
-  text-decoration: none;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
-/* Link de registro */
-.register-link {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-}
-
-.register-link a {
-  color: #00CBC1;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.register-link a:hover {
-  text-decoration: underline;
+.notif-toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }

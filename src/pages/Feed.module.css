@@ -1,0 +1,19 @@
+.wrap {
+  max-width: 720px;
+}
+
+.filterRow {
+  margin-bottom: 22px;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  color: var(--text3);
+  font-size: 14px;
+  padding: 40px 0;
+  text-align: center;
+}
