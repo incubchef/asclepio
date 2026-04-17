@@ -1,0 +1,491 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgBlob1,
+.bgBlob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgBlob1 {
+  width: 480px;
+  height: 480px;
+  top: -140px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.11) 0%, transparent 70%);
+}
+
+.bgBlob2 {
+  width: 380px;
+  height: 380px;
+  bottom: -80px;
+  left: -60px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.09) 0%, transparent 70%);
+}
+
+/* ── Card ── */
+.card {
+  position: relative;
+  z-index: 1;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 580px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+/* ── Header ── */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 17px;
+  color: white;
+}
+
+.brandName {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--text1);
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  color: var(--text3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.backLink:hover {
+  color: var(--accent2);
+}
+
+/* ── Stepper ── */
+.stepper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 0;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 1;
+}
+
+.stepItem:last-child {
+  flex: 0;
+}
+
+.stepDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border2);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text3);
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.stepActive {
+  border-color: var(--accent);
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--accent2);
+}
+
+.stepDone {
+  border-color: var(--teal);
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--teal2);
+}
+
+.stepLabel {
+  font-size: 12px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+.stepLabelActive {
+  color: var(--text1);
+  font-weight: 500;
+}
+
+.stepLine {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin: 0 6px;
+  transition: background 0.2s;
+}
+
+.stepLineDone {
+  background: var(--teal);
+}
+
+/* ── Error ── */
+.errorBox {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--r-md);
+  padding: 10px 13px;
+  font-size: 12.5px;
+  color: #f87171;
+  margin-bottom: 16px;
+}
+
+/* ── Step content ── */
+.stepContent {
+  animation: fadeIn 0.18s ease;
+  min-height: 280px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stepTitle {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--text1);
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.stepSub {
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+/* ── Fields ── */
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--text2);
+  font-weight: 500;
+}
+
+.input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 10px 13px;
+  color: var(--text1);
+  font-family: var(--font);
+  font-size: 13.5px;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--text3);
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.pwWrap {
+  position: relative;
+}
+
+.pwToggle {
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text3);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.pwToggle:hover {
+  color: var(--text2);
+}
+
+/* ── Role grid ── */
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 520px) {
+  .roleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roleCard {
+  position: relative;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 16px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  user-select: none;
+}
+
+.roleCard:hover {
+  border-color: var(--border2);
+  background: var(--surface2);
+}
+
+.roleCardActive {
+  border-color: var(--role-color) !important;
+  background: color-mix(in srgb, var(--role-color) 6%, var(--surface)) !important;
+}
+
+.roleIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.roleLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text1);
+  margin-bottom: 5px;
+}
+
+.roleDesc {
+  font-size: 11.5px;
+  color: var(--text3);
+  line-height: 1.55;
+}
+
+.roleCheck {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Terms ── */
+.termsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.checkRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  position: relative;
+}
+
+.checkRow:hover {
+  border-color: var(--border2);
+}
+
+.checkRowAccent {
+  border-color: rgba(245, 158, 11, 0.25);
+  background: rgba(245, 158, 11, 0.04);
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.checkText {
+  font-size: 12.5px;
+  color: var(--text2);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.termLink {
+  color: var(--accent2);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.reqDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ── Role summary ── */
+.roleSummary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  margin-top: 4px;
+}
+
+.roleSummaryIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.roleSummaryLabel {
+  font-size: 10.5px;
+  color: var(--text3);
+  margin-bottom: 2px;
+}
+
+.roleSummaryName {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text1);
+}
+
+.roleSummarySpec {
+  font-size: 12px;
+  color: var(--teal2);
+  margin-top: 1px;
+}
+
+/* ── Nav row ── */
+.navRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.nextBtn {
+  padding: 10px 24px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--r-md);
+  font-size: 13.5px;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nextBtn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.nextBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
